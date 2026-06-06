@@ -10,5 +10,5 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["scripts/**/*.mts", "src/types/node.d.ts"]
+  "include": ["scripts/**/*.mts"]
 }

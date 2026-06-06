@@ -113,9 +113,18 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return JSON.parse(element.textContent || 'null') as T;
   }
 
+  function queryRequired<T extends Element>(root: ParentNode, selector: string): T {
+    const element = root.querySelector<T>(selector);
+    if (!element) {
+      throw new Error(`Missing webview element: ${selector}`);
+    }
+
+    return element;
+  }
+
   function loadState(): PersistedState {
     try {
-      const parsed = JSON.parse(localStorage.getItem(storageKey));
+      const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null');
       return {
         completedChapters: parsed?.completedChapters || [],
         coursePanelHidden: Boolean(parsed?.coursePanelHidden),
@@ -127,18 +136,18 @@ declare function acquireVsCodeApi(): VsCodeApi;
     }
   }
 
-  function saveState() {
+  function saveState(): void {
     localStorage.setItem(storageKey, JSON.stringify(state));
   }
 
-  function chooseInitialChapter() {
+  function chooseInitialChapter(): number {
     const saved = Number(state.currentChapterNumber);
     const requested = Number(runtime.initialChapter);
     const candidate = requested || saved || 1;
     return book.chapters.some((chapter) => chapter.number === candidate) ? candidate : 1;
   }
 
-  function render() {
+  function render(): void {
     app.innerHTML = `
       <div class="course-layout ${state.coursePanelHidden ? 'nav-collapsed' : ''}" style="--course-nav-width: ${state.coursePanelWidth}px">
         <aside class="sidebar" aria-label="Rust Book chapters">
@@ -176,28 +185,28 @@ declare function acquireVsCodeApi(): VsCodeApi;
       </div>
     `;
 
-    app.querySelector('.hide-course').addEventListener('click', () => setCoursePanelHidden(true));
-    app.querySelector('.show-course').addEventListener('click', () => setCoursePanelHidden(false));
+    queryRequired<HTMLElement>(app, '.hide-course').addEventListener('click', () => setCoursePanelHidden(true));
+    queryRequired<HTMLElement>(app, '.show-course').addEventListener('click', () => setCoursePanelHidden(false));
     installSidebarResizer();
-    app.querySelector('.search-input').addEventListener('input', (event) => {
+    queryRequired<HTMLInputElement>(app, '.search-input').addEventListener('input', (event) => {
       searchQuery = (event.target as HTMLInputElement).value;
       renderChapterList();
     });
 
-    app.querySelector('.previous-chapter').addEventListener('click', () => selectRelativeChapter(-1));
-    app.querySelector('.next-chapter').addEventListener('click', () => selectRelativeChapter(1));
+    queryRequired<HTMLElement>(app, '.previous-chapter').addEventListener('click', () => selectRelativeChapter(-1));
+    queryRequired<HTMLElement>(app, '.next-chapter').addEventListener('click', () => selectRelativeChapter(1));
     installChapterCompletionWatcher();
 
     renderChapterList();
     renderCurrentChapter();
   }
 
-  function installChapterCompletionWatcher() {
+  function installChapterCompletionWatcher(): void {
     window.addEventListener('scroll', scheduleChapterCompletionCheck, { passive: true });
     window.addEventListener('resize', scheduleChapterCompletionCheck);
   }
 
-  function scheduleChapterCompletionCheck() {
+  function scheduleChapterCompletionCheck(): void {
     if (!isReaderAtBottom()) {
       return;
     }
@@ -214,7 +223,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function isReaderAtBottom() {
+  function isReaderAtBottom(): boolean {
     const documentElement = document.documentElement;
     const body = document.body;
     const scrollTop = window.scrollY || documentElement.scrollTop || body.scrollTop || 0;
@@ -229,7 +238,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return scrollTop + viewportHeight >= documentHeight - 24;
   }
 
-  function setCoursePanelHidden(hidden: boolean) {
+  function setCoursePanelHidden(hidden: boolean): void {
     state.coursePanelHidden = hidden;
     if (!hidden) {
       state.coursePanelWidth = clampCoursePanelWidth(state.coursePanelWidth || 320);
@@ -239,7 +248,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     app.querySelector('.course-layout')?.classList.toggle('nav-collapsed', hidden);
   }
 
-  function installSidebarResizer() {
+  function installSidebarResizer(): void {
     const layout = app.querySelector<HTMLElement>('.course-layout');
     const resizer = app.querySelector<HTMLElement>('.sidebar-resizer');
 
@@ -309,7 +318,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function finishResize(pointerId, latestWidth, resizer, layout) {
+  function finishResize(pointerId: number, latestWidth: number, resizer: HTMLElement, layout: HTMLElement): void {
     if (!document.body.classList.contains('resizing-course-nav')) {
       return;
     }
@@ -334,23 +343,23 @@ declare function acquireVsCodeApi(): VsCodeApi;
     saveState();
   }
 
-  function clampCoursePanelWidth(width) {
+  function clampCoursePanelWidth(width: number): number {
     const maximum = Math.max(280, Math.min(760, window.innerWidth - 360));
     return Math.round(Math.min(Math.max(width, 240), maximum));
   }
 
-  function updateResizerValue(resizer, width) {
+  function updateResizerValue(resizer: HTMLElement, width: number): void {
     resizer.setAttribute('aria-valuemin', '0');
     resizer.setAttribute('aria-valuemax', String(Math.max(280, Math.min(760, window.innerWidth - 360))));
     resizer.setAttribute('aria-valuenow', String(Math.max(0, Math.round(width))));
   }
 
-  function courseCollapseThreshold() {
+  function courseCollapseThreshold(): number {
     return 170;
   }
 
-  function renderChapterList() {
-    const list = app.querySelector('.chapter-list');
+  function renderChapterList(): void {
+    const list = queryRequired<HTMLElement>(app, '.chapter-list');
     const query = searchQuery.trim().toLowerCase();
     const visibleChapters = book.chapters.filter((chapter) => {
       if (!query) {
@@ -387,10 +396,10 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function renderCurrentChapter() {
+  function renderCurrentChapter(): void {
     const chapter = currentChapter();
-    const article = app.querySelector('.reader-content');
-    const heading = app.querySelector('.reader-toolbar h1');
+    const article = queryRequired<HTMLElement>(app, '.reader-content');
+    const heading = queryRequired<HTMLElement>(app, '.reader-toolbar h1');
 
     heading.textContent = `Chapter ${chapter.number}: ${chapter.title}`;
 
@@ -414,7 +423,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     article.scrollIntoView({ block: 'start' });
   }
 
-  function renderExercises(chapterNumber) {
+  function renderExercises(chapterNumber: number): string {
     const chapterExercises = exercises.chapters[String(chapterNumber)] || [];
 
     if (chapterExercises.length === 0) {
@@ -451,7 +460,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     `;
   }
 
-  function hydrateImages(root) {
+  function hydrateImages(root: ParentNode): void {
     root.querySelectorAll('img').forEach((image) => {
       const src = image.getAttribute('src') || '';
       if (!src || /^(?:https?:|data:|vscode-resource:|file:)/i.test(src)) {
@@ -462,13 +471,13 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function hydrateLocalLinks(root) {
+  function hydrateLocalLinks(root: ParentNode): void {
     root.querySelectorAll('a[data-book-href]').forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
         const href = link.getAttribute('data-book-href');
         const anchor = link.getAttribute('data-book-anchor') || '';
-        const target = pageIndex.get(href);
+        const target = href ? pageIndex.get(href) : undefined;
 
         if (!target) {
           return;
@@ -486,8 +495,8 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function hydrateCodeBlocks(root) {
-    root.querySelectorAll('pre > code').forEach((codeElement, index) => {
+  function hydrateCodeBlocks(root: ParentNode): void {
+    root.querySelectorAll<HTMLElement>('pre > code').forEach((codeElement, index) => {
       const pre = codeElement.parentElement;
       if (!pre || pre.parentElement?.classList.contains('code-shell')) {
         return;
@@ -526,24 +535,24 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function hydrateExercises(root) {
+  function hydrateExercises(root: ParentNode): void {
     const chapterExercises = exercises.chapters[String(currentChapterNumber)] || [];
 
-    root.querySelectorAll('.exercise-card').forEach((card) => {
+    root.querySelectorAll<HTMLElement>('.exercise-card').forEach((card) => {
       const exercise = chapterExercises.find((candidate) => candidate.id === card.dataset.exerciseId);
 
       if (!exercise) {
         return;
       }
 
-      card.querySelector('.copy-exercise').addEventListener('click', () => copyText(exercise.starterCode));
-      card.querySelector('.open-exercise').addEventListener('click', () => {
+      queryRequired<HTMLElement>(card, '.copy-exercise').addEventListener('click', () => copyText(exercise.starterCode));
+      queryRequired<HTMLElement>(card, '.open-exercise').addEventListener('click', () => {
         vscode.postMessage({ type: 'openExercise', exercise });
       });
     });
   }
 
-  function makeButton(label, extraClass, onClick) {
+  function makeButton(label: string, extraClass: string, onClick: () => void) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = `action-button ${extraClass}`.trim();
@@ -552,7 +561,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return button;
   }
 
-  function classifyCodeBlock(className) {
+  function classifyCodeBlock(className: string): CodeBlockKind {
     if (/\blanguage-console\b/.test(className)) {
       return 'console';
     }
@@ -564,7 +573,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return 'code';
   }
 
-  function hasNonRunnableRustMarker(className) {
+  function hasNonRunnableRustMarker(className: string): boolean {
     const markers = new Set([
       'compile_fail',
       'does_not_compile',
@@ -579,7 +588,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return className.split(/\s+/).some((token) => markers.has(token));
   }
 
-  function highlightRust(source) {
+  function highlightRust(source: string): string {
     const tokenPattern = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/|"(?:\\.|[^"\\])*"|r#*"(?:[\s\S]*?)"#*|'(?:\\.|[^'\\])'|\b\d[\d_]*(?:\.\d[\d_]*)?\b|'[a-zA-Z_][a-zA-Z0-9_]*\b|\b[a-zA-Z_][a-zA-Z0-9_]*!|\b[a-zA-Z_][a-zA-Z0-9_]*\b|::|->|=>|[{}()[\],.;:+\-*/%=<>!&|^?])/g;
     const keywords = new Set([
       'as', 'async', 'await', 'break', 'const', 'continue', 'crate', 'dyn', 'else',
@@ -593,9 +602,9 @@ declare function acquireVsCodeApi(): VsCodeApi;
       'str', 'String', 'u8', 'u16', 'u32', 'u64', 'u128', 'usize', 'Vec', 'Option',
       'Result', 'Some', 'None', 'Ok', 'Err', 'Box', 'Rc', 'Arc', 'RefCell'
     ]);
-    const tokens = [];
+    const tokens: HighlightToken[] = [];
     let cursor = 0;
-    let match;
+    let match: RegExpExecArray | null;
 
     while ((match = tokenPattern.exec(source))) {
       const token = match[0];
@@ -615,7 +624,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return tokens.map((token) => wrapToken(token.text, token.className)).join('');
   }
 
-  function classifyRustToken(token, keywords, types) {
+  function classifyRustToken(token: string, keywords: ReadonlySet<string>, types: ReadonlySet<string>): string {
     if (token.startsWith('//') || token.startsWith('/*')) {
       return 'tok-comment';
     }
@@ -659,7 +668,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return '';
   }
 
-  function applyRustContext(tokens, keywords) {
+  function applyRustContext(tokens: HighlightToken[], keywords: ReadonlySet<string>): void {
     for (let index = 0; index < tokens.length; index += 1) {
       const token = tokens[index];
 
@@ -686,11 +695,11 @@ declare function acquireVsCodeApi(): VsCodeApi;
     }
   }
 
-  function isIdentifier(value) {
+  function isIdentifier(value: string): boolean {
     return /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(value);
   }
 
-  function nextMeaningfulToken(tokens, startIndex) {
+  function nextMeaningfulToken(tokens: HighlightToken[], startIndex: number): HighlightToken | undefined {
     for (let index = startIndex + 1; index < tokens.length; index += 1) {
       if (tokens[index].text.trim()) {
         return tokens[index];
@@ -700,7 +709,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return undefined;
   }
 
-  function previousMeaningfulToken(tokens, startIndex) {
+  function previousMeaningfulToken(tokens: HighlightToken[], startIndex: number): HighlightToken | undefined {
     for (let index = startIndex - 1; index >= 0; index -= 1) {
       if (tokens[index].text.trim()) {
         return tokens[index];
@@ -710,7 +719,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return undefined;
   }
 
-  function wrapToken(token, className) {
+  function wrapToken(token: string, className: string): string {
     if (className === 'tok-string') {
       return `<span class="${className}">${highlightRustString(token)}</span>`;
     }
@@ -719,7 +728,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     return className ? `<span class="${className}">${escaped}</span>` : escaped;
   }
 
-  function highlightRustString(token) {
+  function highlightRustString(token: string): string {
     return escapeHtml(token).replace(/(\{\{|\}\}|\{[^{}\n]+\})/g, (match) => {
       if (match === '{{' || match === '}}') {
         return match;
@@ -729,7 +738,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     });
   }
 
-  function highlightConsole(source) {
+  function highlightConsole(source: string): string {
     return source
       .split('\n')
       .map((line) => {
@@ -743,18 +752,11 @@ declare function acquireVsCodeApi(): VsCodeApi;
       .join('\n');
   }
 
-  async function copyText(text) {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      vscode.postMessage({ type: 'copy', text });
-      return;
-    }
-
+  function copyText(text: string): void {
     vscode.postMessage({ type: 'copy', text });
   }
 
-  function selectChapter(chapterNumber) {
+  function selectChapter(chapterNumber: number): void {
     if (!book.chapters.some((chapter) => chapter.number === chapterNumber)) {
       return;
     }
@@ -763,7 +765,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     renderCurrentChapter();
   }
 
-  function selectRelativeChapter(delta) {
+  function selectRelativeChapter(delta: number): void {
     const index = book.chapters.findIndex((chapter) => chapter.number === currentChapterNumber);
     const next = book.chapters[index + delta];
 
@@ -772,7 +774,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
     }
   }
 
-  function markChapterComplete(chapterNumber) {
+  function markChapterComplete(chapterNumber: number): void {
     const completed = new Set(state.completedChapters);
 
     if (completed.has(chapterNumber)) {
@@ -785,11 +787,11 @@ declare function acquireVsCodeApi(): VsCodeApi;
     renderChapterList();
   }
 
-  function currentChapter() {
+  function currentChapter(): BookChapter {
     return book.chapters.find((chapter) => chapter.number === currentChapterNumber) || book.chapters[0];
   }
 
-  function escapeHtml(value) {
+  function escapeHtml(value: unknown): string {
     return String(value)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
@@ -798,7 +800,7 @@ declare function acquireVsCodeApi(): VsCodeApi;
       .replace(/'/g, '&#39;');
   }
 
-  function escapeAttribute(value) {
+  function escapeAttribute(value: unknown): string {
     return escapeHtml(value);
   }
 })();

@@ -10,5 +10,5 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["test/**/*.ts", "src/types/node.d.ts"]
+  "include": ["test/**/*.ts"]
 }

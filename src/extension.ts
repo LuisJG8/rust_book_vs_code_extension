@@ -258,9 +258,7 @@ async function runRustSnippet(
   const document = await vscode.workspace.openTextDocument(project.mainPath);
   await vscode.window.showTextDocument(document, { preview: false });
 
-  const terminal = getTerminal();
-  terminal.show();
-  terminal.sendText(`cd ${quoteForShell(project.projectDir)} && cargo run`, true);
+  await runCargoProjectTask(project.projectDir);
   void vscode.window.showInformationMessage('Running the Rust snippet in a scratch project.');
 }
 
@@ -325,6 +323,24 @@ function getTerminal(): vscode.Terminal {
   return sharedTerminal;
 }
 
+async function runCargoProjectTask(cwd: string): Promise<void> {
+  const task = new vscode.Task(
+    { type: 'rust-book-course', command: 'cargo run', cwd },
+    vscode.TaskScope.Global,
+    'Run Rust Book Snippet',
+    'Rust Book Course',
+    new vscode.ShellExecution('cargo', ['run'], { cwd }),
+    []
+  );
+
+  task.presentationOptions = {
+    reveal: vscode.TaskRevealKind.Always,
+    panel: vscode.TaskPanelKind.Shared
+  };
+
+  await vscode.tasks.executeTask(task);
+}
+
 function readJsonAsset<T>(context: vscode.ExtensionContext, filename: string): T {
   const assetPath = path.join(context.extensionUri.fsPath, 'assets', filename);
   return JSON.parse(fs.readFileSync(assetPath, 'utf8')) as T;
@@ -351,14 +367,6 @@ function makeSafeProjectName(label: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 64) || 'rust-book-scratch';
-}
-
-function quoteForShell(value: string): string {
-  if (path.sep === '\\') {
-    return `"${value.replace(/"/g, '""')}"`;
-  }
-
-  return `'${value.replace(/'/g, "'\\''")}'`;
 }
 
 function escapeRustString(value: string): string {

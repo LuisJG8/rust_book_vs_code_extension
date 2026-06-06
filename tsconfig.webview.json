@@ -5,7 +5,7 @@
     "lib": ["ES2022", "DOM"],
     "rootDir": "webview",
     "outDir": "media",
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },

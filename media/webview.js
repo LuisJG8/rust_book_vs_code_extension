@@ -1,3 +1,4 @@
+"use strict";
 (function () {
     const vscode = acquireVsCodeApi();
     const book = readJson('book-data');
@@ -29,9 +30,16 @@
         }
         return JSON.parse(element.textContent || 'null');
     }
+    function queryRequired(root, selector) {
+        const element = root.querySelector(selector);
+        if (!element) {
+            throw new Error(`Missing webview element: ${selector}`);
+        }
+        return element;
+    }
     function loadState() {
         try {
-            const parsed = JSON.parse(localStorage.getItem(storageKey));
+            const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null');
             return {
                 completedChapters: parsed?.completedChapters || [],
                 coursePanelHidden: Boolean(parsed?.coursePanelHidden),
@@ -89,15 +97,15 @@
         </main>
       </div>
     `;
-        app.querySelector('.hide-course').addEventListener('click', () => setCoursePanelHidden(true));
-        app.querySelector('.show-course').addEventListener('click', () => setCoursePanelHidden(false));
+        queryRequired(app, '.hide-course').addEventListener('click', () => setCoursePanelHidden(true));
+        queryRequired(app, '.show-course').addEventListener('click', () => setCoursePanelHidden(false));
         installSidebarResizer();
-        app.querySelector('.search-input').addEventListener('input', (event) => {
+        queryRequired(app, '.search-input').addEventListener('input', (event) => {
             searchQuery = event.target.value;
             renderChapterList();
         });
-        app.querySelector('.previous-chapter').addEventListener('click', () => selectRelativeChapter(-1));
-        app.querySelector('.next-chapter').addEventListener('click', () => selectRelativeChapter(1));
+        queryRequired(app, '.previous-chapter').addEventListener('click', () => selectRelativeChapter(-1));
+        queryRequired(app, '.next-chapter').addEventListener('click', () => selectRelativeChapter(1));
         installChapterCompletionWatcher();
         renderChapterList();
         renderCurrentChapter();
@@ -230,7 +238,7 @@
         return 170;
     }
     function renderChapterList() {
-        const list = app.querySelector('.chapter-list');
+        const list = queryRequired(app, '.chapter-list');
         const query = searchQuery.trim().toLowerCase();
         const visibleChapters = book.chapters.filter((chapter) => {
             if (!query) {
@@ -264,8 +272,8 @@
     }
     function renderCurrentChapter() {
         const chapter = currentChapter();
-        const article = app.querySelector('.reader-content');
-        const heading = app.querySelector('.reader-toolbar h1');
+        const article = queryRequired(app, '.reader-content');
+        const heading = queryRequired(app, '.reader-toolbar h1');
         heading.textContent = `Chapter ${chapter.number}: ${chapter.title}`;
         article.innerHTML = `
       ${chapter.pages.map((page) => `
@@ -334,7 +342,7 @@
                 event.preventDefault();
                 const href = link.getAttribute('data-book-href');
                 const anchor = link.getAttribute('data-book-anchor') || '';
-                const target = pageIndex.get(href);
+                const target = href ? pageIndex.get(href) : undefined;
                 if (!target) {
                     return;
                 }
@@ -389,8 +397,8 @@
             if (!exercise) {
                 return;
             }
-            card.querySelector('.copy-exercise').addEventListener('click', () => copyText(exercise.starterCode));
-            card.querySelector('.open-exercise').addEventListener('click', () => {
+            queryRequired(card, '.copy-exercise').addEventListener('click', () => copyText(exercise.starterCode));
+            queryRequired(card, '.open-exercise').addEventListener('click', () => {
                 vscode.postMessage({ type: 'openExercise', exercise });
             });
         });
@@ -556,14 +564,7 @@
         })
             .join('\n');
     }
-    async function copyText(text) {
-        try {
-            await navigator.clipboard.writeText(text);
-        }
-        catch {
-            vscode.postMessage({ type: 'copy', text });
-            return;
-        }
+    function copyText(text) {
         vscode.postMessage({ type: 'copy', text });
     }
     function selectChapter(chapterNumber) {
