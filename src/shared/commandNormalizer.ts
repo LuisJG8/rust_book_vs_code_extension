@@ -62,10 +62,6 @@ export function extractRunnableCommands(rawBlockText: string): string[] {
     return nonEmptyLines;
   }
 
-  if (nonEmptyLines.length === 1 && isSafeRunnableCommand(nonEmptyLines[0])) {
-    return [nonEmptyLines[0]];
-  }
-
   return [];
 }
 

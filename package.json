@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "publisher": "local",
   "license": "MIT",
+  "icon": "assets/icon.png",
   "packageManager": "pnpm@11.0.6",
   "engines": {
     "vscode": "^1.90.0"
@@ -41,13 +42,18 @@
     ]
   },
   "scripts": {
-    "generate:exercises": "node scripts/generate-exercises.mjs",
-    "generate:book": "node scripts/generate-book.mjs",
-    "generate": "pnpm run generate:exercises && pnpm run generate:book",
-    "compile": "node scripts/run-tsc.mjs -p ./tsconfig.json",
-    "test": "pnpm run generate && pnpm run compile && node test/runTests.js"
+    "compile:extension": "node node_modules/typescript/bin/tsc -p ./tsconfig.json",
+    "compile:scripts": "node node_modules/typescript/bin/tsc -p ./tsconfig.scripts.json",
+    "compile:webview": "node node_modules/typescript/bin/tsc -p ./tsconfig.webview.json",
+    "compile:test": "node node_modules/typescript/bin/tsc -p ./tsconfig.test.json",
+    "generate:exercises": "pnpm run compile:scripts && node out-scripts/generate-exercises.mjs",
+    "generate:book": "pnpm run compile:scripts && node out-scripts/generate-book.mjs",
+    "generate": "pnpm run compile:scripts && node out-scripts/generate-exercises.mjs && node out-scripts/generate-book.mjs",
+    "compile": "pnpm run compile:extension && pnpm run compile:scripts && pnpm run compile:webview && pnpm run compile:test",
+    "test": "pnpm run compile && pnpm run generate && node out-test/runTests.mjs"
   },
   "devDependencies": {
+    "@types/node": "^20.19.41",
     "@types/vscode": "^1.90.0",
     "typescript": "^5.4.5"
   }
