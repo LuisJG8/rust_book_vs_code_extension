@@ -65,6 +65,11 @@ let sharedTerminal: vscode.Terminal | undefined;
 
 export function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(
+    vscode.window.onDidCloseTerminal((terminal) => {
+      if (terminal === sharedTerminal) {
+        sharedTerminal = undefined;
+      }
+    }),
     vscode.commands.registerCommand('rustBookCourse.open', () => {
       RustBookCoursePanel.open(context);
     }),
@@ -255,8 +260,8 @@ async function runRustSnippet(
 
   const terminal = getTerminal();
   terminal.show();
-  terminal.sendText(`cd ${quoteForShell(project.projectDir)} && cargo run`, false);
-  void vscode.window.showInformationMessage('Opened a scratch Rust project. Review the code before running cargo run.');
+  terminal.sendText(`cd ${quoteForShell(project.projectDir)} && cargo run`, true);
+  void vscode.window.showInformationMessage('Running the Rust snippet in a scratch project.');
 }
 
 async function openExerciseProject(
@@ -281,10 +286,14 @@ function createScratchCargoProject(
 ): { projectDir: string; mainPath: string } {
   const safeName = makeSafeProjectName(label);
   const baseDir = getScratchBaseDir(context);
-  const projectDir = path.join(baseDir, kind, `${Date.now()}-${safeName}`);
+  const projectDir = kind === 'snippets'
+    ? path.join(baseDir, kind, 'scratchpad')
+    : path.join(baseDir, kind, `${Date.now()}-${safeName}`);
   const srcDir = path.join(projectDir, 'src');
   const mainPath = path.join(srcDir, 'main.rs');
-  const packageName = safeName.replace(/-/g, '_').slice(0, 48) || 'rust_book_scratch';
+  const packageName = kind === 'snippets'
+    ? 'rust_book_snippet'
+    : safeName.replace(/-/g, '_').slice(0, 48) || 'rust_book_scratch';
 
   fs.mkdirSync(srcDir, { recursive: true });
   fs.writeFileSync(
@@ -345,7 +354,11 @@ function makeSafeProjectName(label: string): string {
 }
 
 function quoteForShell(value: string): string {
-  return `"${value.replace(/(["\\$`])/g, '\\$1')}"`;
+  if (path.sep === '\\') {
+    return `"${value.replace(/"/g, '""')}"`;
+  }
+
+  return `'${value.replace(/'/g, "'\\''")}'`;
 }
 
 function escapeRustString(value: string): string {

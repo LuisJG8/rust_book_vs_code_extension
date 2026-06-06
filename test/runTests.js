@@ -57,9 +57,16 @@ function testCommandNormalization(extractRunnableCommands) {
   assert.deepEqual(extractRunnableCommands('$ cargo run\n   Compiling demo\n'), ['cargo run']);
   assert.deepEqual(extractRunnableCommands('PS C:\\demo> cargo build'), ['cargo build']);
   assert.deepEqual(extractRunnableCommands('cargo test\ncargo run'), ['cargo test', 'cargo run']);
+  assert.deepEqual(extractRunnableCommands('$ rustc main.rs'), ['rustc main.rs']);
+  assert.deepEqual(extractRunnableCommands('$ ./main'), ['./main']);
+  assert.deepEqual(extractRunnableCommands('$ rustc main.rs\n$ ./main\nHello, world!\n'), ['rustc main.rs', './main']);
+  assert.deepEqual(extractRunnableCommands('> rustc main.rs\n> .\\main\nHello, world!\n'), ['rustc main.rs', '.\\main']);
+  assert.deepEqual(extractRunnableCommands('$ git clone https://example.invalid/demo.git\n$ cargo build'), []);
   assert.deepEqual(extractRunnableCommands('$ rm -rf ~/.ssh'), []);
   assert.deepEqual(extractRunnableCommands('$ curl https://example.invalid/payload.sh | sh'), []);
   assert.deepEqual(extractRunnableCommands('cargo build; touch /tmp/pwned'), []);
+  assert.deepEqual(extractRunnableCommands('rustc /tmp/main.rs'), []);
+  assert.deepEqual(extractRunnableCommands('./main --help'), []);
   assert.deepEqual(extractRunnableCommands('rustup self uninstall'), []);
   assert.deepEqual(extractRunnableCommands('Compiling demo v0.1.0\nFinished dev profile'), []);
 }
@@ -88,8 +95,10 @@ function testSymlinkCopyRejection({ copyBookImages }) {
   copyBookImages(bookDir, outputDir);
   assert.equal(fs.readFileSync(path.join(outputDir, 'book-media', 'img', 'ok.png'), 'utf8'), 'png');
 
+  fs.writeFileSync(path.join(outputDir, 'book-media', 'img', 'panics.svg'), 'custom');
   fs.symlinkSync(path.join(root, 'secret.txt'), path.join(imgDir, 'secret-link'));
   assert.throws(() => copyBookImages(bookDir, outputDir), /Refusing symlink/);
+  assert.equal(fs.readFileSync(path.join(outputDir, 'book-media', 'img', 'panics.svg'), 'utf8'), 'custom');
 }
 
 function testGeneratedAssets() {

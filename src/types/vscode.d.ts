@@ -92,6 +92,7 @@ declare module 'vscode' {
     ): WebviewPanel;
 
     export function createTerminal(name: string): Terminal;
+    export const onDidCloseTerminal: (listener: (terminal: Terminal) => unknown) => Disposable;
     export function showInformationMessage(message: string): Thenable<string | undefined>;
     export function showWarningMessage(message: string): Thenable<string | undefined>;
     export function showTextDocument(document: TextDocument, options?: TextDocumentShowOptions): Thenable<unknown>;

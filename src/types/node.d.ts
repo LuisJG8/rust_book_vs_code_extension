@@ -7,5 +7,6 @@ declare module 'fs' {
 }
 
 declare module 'path' {
+  export const sep: string;
   export function join(...paths: string[]): string;
 }

@@ -151,9 +151,13 @@ export function copyBookImages(bookDir, outputDir) {
 
   fs.mkdirSync(path.dirname(destinationImageDir), { recursive: true });
   const customImages = collectCustomImageFiles(sourceImageDir, destinationImageDir);
-  fs.rmSync(destinationImageDir, { recursive: true, force: true });
-  copyDirectoryWithoutSymlinks(sourceImageDir, destinationImageDir, fs.realpathSync(sourceImageDir));
-  restoreCustomImageFiles(destinationImageDir, customImages);
+
+  try {
+    fs.rmSync(destinationImageDir, { recursive: true, force: true });
+    copyDirectoryWithoutSymlinks(sourceImageDir, destinationImageDir, fs.realpathSync(sourceImageDir));
+  } finally {
+    restoreCustomImageFiles(destinationImageDir, customImages);
+  }
 }
 
 export function resolveInsideRoot(rootDir, candidatePath) {
