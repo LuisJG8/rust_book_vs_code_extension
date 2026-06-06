@@ -6,6 +6,30 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const assetsDir = path.join(repoRoot, 'assets');
 
+type ExerciseTemplate = {
+  concept: string;
+  title: string;
+  prompt: string;
+  expectedBehavior: string;
+};
+
+type ChapterTemplate = {
+  title: string;
+  exercises: ExerciseTemplate[];
+};
+
+type Exercise = {
+  id: string;
+  chapterNumber: number;
+  title: string;
+  conceptFocus: string;
+  prompt: string;
+  workspaceSetup: string;
+  starterCode: string;
+  expectedBehavior: string;
+  hints: string[];
+};
+
 const chapters = [
   {
     title: 'Getting Started',
@@ -322,13 +346,13 @@ const chapters = [
       task('Refactoring', 'Extract request handling into a small function.', 'Server behavior stays the same.')
     ]
   }
-];
+] satisfies ChapterTemplate[];
 
-function task(concept, prompt, expectedBehavior) {
+function task(concept: string, prompt: string, expectedBehavior: string): ExerciseTemplate {
   return { concept, title: concept, prompt, expectedBehavior };
 }
 
-function starterCode(chapterNumber, exerciseNumber, exercise) {
+function starterCode(chapterNumber: number, exerciseNumber: number, exercise: ExerciseTemplate): string {
   const functionName = `chapter_${chapterNumber}_exercise_${exerciseNumber}`;
   return `fn main() {
     println!("Chapter ${chapterNumber}, exercise ${exerciseNumber}: ${escapeRustString(exercise.concept)}");
@@ -342,11 +366,11 @@ fn ${functionName}() {
 `;
 }
 
-function escapeRustString(value) {
+function escapeRustString(value: string): string {
   return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
-const exercises = {};
+const exercises: Record<string, Exercise[]> = {};
 
 chapters.forEach((chapter, index) => {
   const chapterNumber = index + 1;

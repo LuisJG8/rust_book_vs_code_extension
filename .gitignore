@@ -1,4 +1,6 @@
 out/
+out-scripts/
+out-test/
 node_modules/
 .pnpm-store/
 .vscode-test/

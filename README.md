@@ -13,8 +13,8 @@ A local TypeScript VS Code extension that turns the Rust Book into an interactiv
 ## Local Development
 
 ```sh
-pnpm run generate
 pnpm run compile
+pnpm run generate
 pnpm test
 ```
 

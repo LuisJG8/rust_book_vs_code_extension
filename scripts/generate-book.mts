@@ -9,8 +9,20 @@ import {
   locateRustBookDir,
   parseTocFromHtml,
   resolveInsideRoot,
-  rewriteLocalLinks
+  rewriteLocalLinks,
+  type TocChapter,
+  type TocPage
 } from './bookTools.mjs';
+
+type BookPage = TocPage & {
+  html: string;
+  searchText: string;
+};
+
+type BookChapter = Omit<TocChapter, 'pages'> & {
+  pages: BookPage[];
+  searchText: string;
+};
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const assetsDir = path.join(repoRoot, 'assets');
@@ -26,8 +38,8 @@ const tocHtml = fs.readFileSync(tocPath, 'utf8');
 const { chapters, allPages } = parseTocFromHtml(tocHtml);
 const knownHrefs = new Set(allPages.map((page) => page.href));
 
-const transformedChapters = chapters.map((chapter) => {
-  const pages = chapter.pages.map((page) => {
+const transformedChapters: BookChapter[] = chapters.map((chapter) => {
+  const pages: BookPage[] = chapter.pages.map((page) => {
     const sourcePath = resolveInsideRoot(bookDir, page.href);
     const rawHtml = fs.readFileSync(sourcePath, 'utf8');
     const mainHtml = rewriteLocalLinks(extractMainContent(rawHtml), knownHrefs);
