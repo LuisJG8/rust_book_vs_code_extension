@@ -50,7 +50,7 @@
     "generate:book": "pnpm run compile:scripts && node out-scripts/generate-book.mjs",
     "generate": "pnpm run compile:scripts && node out-scripts/generate-exercises.mjs && node out-scripts/generate-book.mjs",
     "compile": "pnpm run compile:extension && pnpm run compile:scripts && pnpm run compile:webview && pnpm run compile:test",
-    "test": "pnpm run compile && pnpm run generate && node out-test/runTests.js"
+    "test": "pnpm run compile && pnpm run generate && node out-test/runTests.mjs"
   },
   "devDependencies": {
     "@types/node": "^20.19.41",

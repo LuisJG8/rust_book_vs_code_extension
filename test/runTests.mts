@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 type TocPage = {
   href: string;
@@ -30,6 +31,8 @@ type Exercise = {
   expectedBehavior: string;
   hints: string[];
 };
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 async function main() {
   const bookToolsPath = '../out-scripts/bookTools.mjs';
