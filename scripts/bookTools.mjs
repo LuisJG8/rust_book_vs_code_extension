@@ -132,10 +132,25 @@ export function classifyCodeBlockClass(className) {
   }
 
   if (/\blanguage-rust\b/.test(className)) {
-    return 'rust';
+    return hasNonRunnableRustMarker(className) ? 'rust-static' : 'rust';
   }
 
   return 'code';
+}
+
+function hasNonRunnableRustMarker(className) {
+  const markers = new Set([
+    'compile_fail',
+    'does_not_compile',
+    'ignore',
+    'no_run',
+    'noplayground',
+    'not_desired_behavior',
+    'panics',
+    'should_panic'
+  ]);
+
+  return className.split(/\s+/).some((token) => markers.has(token));
 }
 
 export function buildSearchText(html) {

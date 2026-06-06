@@ -51,7 +51,10 @@ function testMainExtraction({ extractMainContent, rewriteLocalLinks }) {
 
 function testCodeClassification({ classifyCodeBlockClass }) {
   assert.equal(classifyCodeBlockClass('language-console'), 'console');
-  assert.equal(classifyCodeBlockClass('language-rust ignore'), 'rust');
+  assert.equal(classifyCodeBlockClass('language-rust edition2024'), 'rust');
+  assert.equal(classifyCodeBlockClass('language-rust ignore'), 'rust-static');
+  assert.equal(classifyCodeBlockClass('language-rust ignore does_not_compile'), 'rust-static');
+  assert.equal(classifyCodeBlockClass('language-rust noplayground panics'), 'rust-static');
   assert.equal(classifyCodeBlockClass('language-toml'), 'code');
 }
 

@@ -385,7 +385,7 @@
       const actions = document.createElement('div');
       const label = document.createElement('span');
 
-      if (kind === 'rust') {
+      if (kind === 'rust' || kind === 'rust-static') {
         codeElement.innerHTML = highlightRust(codeText);
       } else if (kind === 'console') {
         codeElement.innerHTML = highlightConsole(codeText);
@@ -395,7 +395,7 @@
       toolbar.className = 'code-toolbar';
       actions.className = 'code-actions';
       label.className = 'code-kind';
-      label.textContent = kind === 'console' ? 'Terminal' : kind === 'rust' ? 'Rust' : 'Code';
+      label.textContent = kind === 'console' ? 'Terminal' : kind === 'rust' || kind === 'rust-static' ? 'Rust' : 'Code';
 
       actions.appendChild(makeButton('Copy', 'secondary-button', () => copyText(codeText)));
 
@@ -453,10 +453,25 @@
     }
 
     if (/\blanguage-rust\b/.test(className)) {
-      return 'rust';
+      return hasNonRunnableRustMarker(className) ? 'rust-static' : 'rust';
     }
 
     return 'code';
+  }
+
+  function hasNonRunnableRustMarker(className) {
+    const markers = new Set([
+      'compile_fail',
+      'does_not_compile',
+      'ignore',
+      'no_run',
+      'noplayground',
+      'not_desired_behavior',
+      'panics',
+      'should_panic'
+    ]);
+
+    return className.split(/\s+/).some((token) => markers.has(token));
   }
 
   function highlightRust(source) {
