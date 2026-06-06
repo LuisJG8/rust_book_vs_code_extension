@@ -385,6 +385,15 @@
                     vscode.postMessage({ type: 'runCommand', text: codeText });
                 }));
             }
+            if (kind === 'rust') {
+                actions.appendChild(makeButton('Open Rust Project', '', () => {
+                    vscode.postMessage({
+                        type: 'runRust',
+                        code: codeText,
+                        label: `Chapter ${currentChapterNumber} Snippet ${index + 1}`
+                    });
+                }));
+            }
             toolbar.append(label, actions);
             pre.replaceWith(shell);
             shell.append(toolbar, pre);
