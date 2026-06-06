@@ -1,0 +1,7 @@
+out/
+node_modules/
+.pnpm-store/
+.vscode-test/
+.rust-book-course/
+*.vsix
+.DS_Store

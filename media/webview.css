@@ -1,0 +1,613 @@
+:root {
+  --surface: var(--vscode-editor-background);
+  --surface-raised: var(--vscode-sideBar-background);
+  --surface-soft: color-mix(in srgb, var(--vscode-editor-background) 88%, var(--vscode-textLink-foreground) 12%);
+  --border: var(--vscode-panel-border);
+  --text: var(--vscode-editor-foreground);
+  --muted: var(--vscode-descriptionForeground);
+  --accent: #d16b2a;
+  --accent-strong: #f08b3e;
+  --button-bg: var(--vscode-button-background);
+  --button-fg: var(--vscode-button-foreground);
+  --button-hover: var(--vscode-button-hoverBackground);
+  --mono: var(--vscode-editor-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  --sans: var(--vscode-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.course-layout {
+  display: grid;
+  grid-template-columns: var(--course-nav-width, 320px) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.course-layout.nav-collapsed {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.course-layout.nav-collapsed .sidebar {
+  display: none;
+}
+
+.course-layout.nav-preview-collapse .sidebar {
+  opacity: 0.62;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+  background: var(--surface-raised);
+}
+
+.sidebar-header {
+  padding: 18px 16px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+}
+
+.brand-mark {
+  flex: 0 0 auto;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--accent) 60%, var(--border));
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.brand-mascot {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.icon-button {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.icon-button:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--accent-strong);
+  background: color-mix(in srgb, var(--surface-raised) 80%, var(--accent) 12%);
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.search-input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--vscode-input-border, var(--border));
+  border-radius: 6px;
+  color: var(--vscode-input-foreground);
+  background: var(--vscode-input-background);
+}
+
+.chapter-list {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 8px;
+}
+
+.sidebar-resizer {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  z-index: 5;
+  width: 8px;
+  height: 100%;
+  cursor: col-resize;
+  touch-action: none;
+}
+
+.sidebar-resizer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 2px;
+  height: 100%;
+  background: transparent;
+}
+
+.sidebar-resizer:hover::after,
+.resizing-course-nav .sidebar-resizer::after {
+  background: color-mix(in srgb, var(--accent) 72%, var(--border));
+}
+
+.resizing-course-nav {
+  cursor: col-resize;
+  user-select: none;
+}
+
+.resizing-course-nav * {
+  cursor: col-resize !important;
+}
+
+.chapter-button {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 10px;
+  width: 100%;
+  padding: 10px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chapter-button:hover {
+  background: color-mix(in srgb, var(--surface-raised) 80%, var(--text) 8%);
+}
+
+.chapter-button[aria-current="true"] {
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--border));
+  background: color-mix(in srgb, var(--surface-raised) 80%, var(--accent) 12%);
+}
+
+.chapter-number {
+  line-height: 1.4;
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chapter-copy {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.chapter-heading-line {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  gap: 8px;
+}
+
+.chapter-title {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chapter-meta {
+  display: block;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.progress-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  align-self: center;
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+}
+
+.chapter-button.completed .progress-dot {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+}
+
+.reader {
+  min-width: 0;
+  padding: 0 0 48px;
+}
+
+.reader-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 28px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.reader-toolbar h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.show-course {
+  display: none;
+}
+
+.nav-collapsed .show-course {
+  display: inline-block;
+}
+
+.reader-content {
+  max-width: 920px;
+  padding: 28px;
+  margin: 0 auto;
+}
+
+.page-section {
+  margin-bottom: 32px;
+}
+
+.page-section + .page-section {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.page-label {
+  margin: 0 0 8px;
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+.reader-content h1,
+.reader-content h2,
+.reader-content h3,
+.reader-content h4 {
+  line-height: 1.22;
+}
+
+.reader-content h1 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.reader-content h2 {
+  margin-top: 34px;
+  font-size: 22px;
+}
+
+.reader-content h3 {
+  margin-top: 26px;
+  font-size: 17px;
+}
+
+.reader-content a {
+  color: var(--vscode-textLink-foreground);
+}
+
+.reader-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.code-shell {
+  margin: 16px 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--vscode-textCodeBlock-background, color-mix(in srgb, var(--surface) 84%, var(--text) 8%));
+}
+
+.code-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 8px 7px 12px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-raised) 86%, var(--text) 4%);
+}
+
+.code-kind {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.code-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.action-button {
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid var(--vscode-button-border, transparent);
+  border-radius: 6px;
+  color: var(--button-fg);
+  background: var(--button-bg);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.action-button:hover {
+  background: var(--button-hover);
+}
+
+.secondary-button {
+  color: var(--text);
+  background: transparent;
+  border-color: var(--border);
+}
+
+.secondary-button:hover {
+  background: color-mix(in srgb, var(--surface) 80%, var(--text) 10%);
+}
+
+pre {
+  margin: 0;
+  padding: 14px 16px;
+  overflow: auto;
+  color: var(--vscode-editor-foreground);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tok-keyword {
+  color: #ff7b72;
+  font-weight: 600;
+}
+
+.tok-storage {
+  color: #ff7b72;
+  font-weight: 600;
+}
+
+.tok-type {
+  color: #39c5cf;
+}
+
+.tok-namespace {
+  color: #39c5cf;
+}
+
+.tok-string {
+  color: #a5d6ff;
+}
+
+.tok-format-placeholder {
+  color: #ffa198;
+}
+
+.tok-number {
+  color: #79c0ff;
+}
+
+.tok-comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.tok-macro {
+  color: #d2a8ff;
+}
+
+.tok-function,
+.tok-function-declaration {
+  color: #d2a8ff;
+}
+
+.tok-lifetime {
+  color: #ffa198;
+}
+
+.tok-variable-declaration {
+  color: var(--vscode-editor-foreground);
+}
+
+.tok-bracket {
+  color: #ffd700;
+}
+
+.tok-operator {
+  color: var(--vscode-editor-foreground);
+}
+
+.tok-terminal-prompt {
+  color: var(--vscode-terminal-ansiGreen, #89d185);
+  font-weight: 700;
+}
+
+.tok-terminal-command {
+  color: var(--vscode-terminal-foreground, var(--vscode-editor-foreground));
+}
+
+.tok-terminal-output {
+  color: color-mix(in srgb, var(--vscode-terminal-foreground, var(--vscode-editor-foreground)) 68%, transparent);
+}
+
+code {
+  font-family: var(--mono);
+}
+
+p code,
+li code {
+  padding: 0 4px;
+  border-radius: 4px;
+  background: var(--vscode-textCodeBlock-background, color-mix(in srgb, var(--surface) 84%, var(--text) 8%));
+}
+
+.exercise-section {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.exercise-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.exercise-header h2 {
+  margin: 0;
+}
+
+.exercise-count {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.exercise-list {
+  display: grid;
+  gap: 12px;
+}
+
+.exercise-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 92%, var(--text) 4%);
+}
+
+.exercise-card h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.exercise-focus {
+  margin: 0 0 8px;
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.exercise-card p {
+  margin: 8px 0;
+}
+
+.exercise-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.hint-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.empty-state,
+.loading-state {
+  padding: 28px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    max-height: 46vh;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .reader-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px 16px;
+  }
+
+  .reader-content {
+    padding: 20px 16px;
+  }
+}
