@@ -1,0 +1,2987 @@
+{
+  "generatedAt": "2026-06-06T10:55:55.837Z",
+  "chapters": {
+    "1": [
+      {
+        "id": "ch01-ex01",
+        "chapterNumber": 1,
+        "title": "Hello output",
+        "conceptFocus": "Hello output",
+        "prompt": "Print \"Hello, Rust!\" and your name from `main`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 1: Hello output\");\n    chapter_1_exercise_1();\n}\n\nfn chapter_1_exercise_1() {\n    // TODO: Print \"Hello, Rust!\" and your name from `main`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The program prints both lines.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on Hello output."
+        ]
+      },
+      {
+        "id": "ch01-ex02",
+        "chapterNumber": 1,
+        "title": "println! macro",
+        "conceptFocus": "println! macro",
+        "prompt": "Print three labeled lines with `println!`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 2: println! macro\");\n    chapter_1_exercise_2();\n}\n\nfn chapter_1_exercise_2() {\n    // TODO: Print three labeled lines with `println!`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each line has a clear label.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on println! macro."
+        ]
+      },
+      {
+        "id": "ch01-ex03",
+        "chapterNumber": 1,
+        "title": "main function",
+        "conceptFocus": "main function",
+        "prompt": "Move repeated printing into a helper called from `main`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 3: main function\");\n    chapter_1_exercise_3();\n}\n\nfn chapter_1_exercise_3() {\n    // TODO: Move repeated printing into a helper called from `main`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`main` calls one helper function.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on main function."
+        ]
+      },
+      {
+        "id": "ch01-ex04",
+        "chapterNumber": 1,
+        "title": "semicolons",
+        "conceptFocus": "semicolons",
+        "prompt": "Fix a missing semicolon compile error.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 4: semicolons\");\n    chapter_1_exercise_4();\n}\n\nfn chapter_1_exercise_4() {\n    // TODO: Fix a missing semicolon compile error.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The fixed program compiles.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on semicolons."
+        ]
+      },
+      {
+        "id": "ch01-ex05",
+        "chapterNumber": 1,
+        "title": "rustc compile",
+        "conceptFocus": "rustc compile",
+        "prompt": "Write a `main.rs` that compiles with `rustc main.rs`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 5: rustc compile\");\n    chapter_1_exercise_5();\n}\n\nfn chapter_1_exercise_5() {\n    // TODO: Write a `main.rs` that compiles with `rustc main.rs`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`rustc` builds the file successfully.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on rustc compile."
+        ]
+      },
+      {
+        "id": "ch01-ex06",
+        "chapterNumber": 1,
+        "title": "Cargo run",
+        "conceptFocus": "Cargo run",
+        "prompt": "Add a helper function and run it with `cargo run`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 6: Cargo run\");\n    chapter_1_exercise_6();\n}\n\nfn chapter_1_exercise_6() {\n    // TODO: Add a helper function and run it with `cargo run`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`cargo run` prints the helper result.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on Cargo run."
+        ]
+      },
+      {
+        "id": "ch01-ex07",
+        "chapterNumber": 1,
+        "title": "Package name",
+        "conceptFocus": "Package name",
+        "prompt": "Print the Cargo package name with `env!`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 7: Package name\");\n    chapter_1_exercise_7();\n}\n\nfn chapter_1_exercise_7() {\n    // TODO: Print the Cargo package name with `env!`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The output includes the package name.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on Package name."
+        ]
+      },
+      {
+        "id": "ch01-ex08",
+        "chapterNumber": 1,
+        "title": "cargo check",
+        "conceptFocus": "cargo check",
+        "prompt": "Fix the starter code until `cargo check` passes.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 8: cargo check\");\n    chapter_1_exercise_8();\n}\n\nfn chapter_1_exercise_8() {\n    // TODO: Fix the starter code until `cargo check` passes.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`cargo check` finishes without errors.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on cargo check."
+        ]
+      },
+      {
+        "id": "ch01-ex09",
+        "chapterNumber": 1,
+        "title": "rustfmt",
+        "conceptFocus": "rustfmt",
+        "prompt": "Format a messy function with `cargo fmt`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 9: rustfmt\");\n    chapter_1_exercise_9();\n}\n\nfn chapter_1_exercise_9() {\n    // TODO: Format a messy function with `cargo fmt`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The code is formatted and still runs.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on rustfmt."
+        ]
+      },
+      {
+        "id": "ch01-ex10",
+        "chapterNumber": 1,
+        "title": "Build steps",
+        "conceptFocus": "Build steps",
+        "prompt": "Print one line for compile and one line for run.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 1, exercise 10: Build steps\");\n    chapter_1_exercise_10();\n}\n\nfn chapter_1_exercise_10() {\n    // TODO: Print one line for compile and one line for run.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The output shows both steps.",
+        "hints": [
+          "Review Chapter 1.",
+          "Focus on Build steps."
+        ]
+      }
+    ],
+    "2": [
+      {
+        "id": "ch02-ex01",
+        "chapterNumber": 2,
+        "title": "Standard input",
+        "conceptFocus": "Standard input",
+        "prompt": "Read one line from stdin and print it back.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 1: Standard input\");\n    chapter_2_exercise_1();\n}\n\nfn chapter_2_exercise_1() {\n    // TODO: Read one line from stdin and print it back.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The typed text is echoed.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Standard input."
+        ]
+      },
+      {
+        "id": "ch02-ex02",
+        "chapterNumber": 2,
+        "title": "Mutable variable",
+        "conceptFocus": "Mutable variable",
+        "prompt": "Store user input in a mutable `String`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 2: Mutable variable\");\n    chapter_2_exercise_2();\n}\n\nfn chapter_2_exercise_2() {\n    // TODO: Store user input in a mutable `String`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The input buffer is filled and printed.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Mutable variable."
+        ]
+      },
+      {
+        "id": "ch02-ex03",
+        "chapterNumber": 2,
+        "title": "Parsing numbers",
+        "conceptFocus": "Parsing numbers",
+        "prompt": "Parse a trimmed input string into a number.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 3: Parsing numbers\");\n    chapter_2_exercise_3();\n}\n\nfn chapter_2_exercise_3() {\n    // TODO: Parse a trimmed input string into a number.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Valid numbers parse successfully.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Parsing numbers."
+        ]
+      },
+      {
+        "id": "ch02-ex04",
+        "chapterNumber": 2,
+        "title": "Result handling",
+        "conceptFocus": "Result handling",
+        "prompt": "Print a friendly message for bad number input.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 4: Result handling\");\n    chapter_2_exercise_4();\n}\n\nfn chapter_2_exercise_4() {\n    // TODO: Print a friendly message for bad number input.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Invalid input does not panic.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Result handling."
+        ]
+      },
+      {
+        "id": "ch02-ex05",
+        "chapterNumber": 2,
+        "title": "Random number",
+        "conceptFocus": "Random number",
+        "prompt": "Generate a number from 1 to 100.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 5: Random number\");\n    chapter_2_exercise_5();\n}\n\nfn chapter_2_exercise_5() {\n    // TODO: Generate a number from 1 to 100.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The number stays in range.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Random number."
+        ]
+      },
+      {
+        "id": "ch02-ex06",
+        "chapterNumber": 2,
+        "title": "Ordering match",
+        "conceptFocus": "Ordering match",
+        "prompt": "Match a guess against a secret number.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 6: Ordering match\");\n    chapter_2_exercise_6();\n}\n\nfn chapter_2_exercise_6() {\n    // TODO: Match a guess against a secret number.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Less, equal, and greater are handled.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Ordering match."
+        ]
+      },
+      {
+        "id": "ch02-ex07",
+        "chapterNumber": 2,
+        "title": "Loop and break",
+        "conceptFocus": "Loop and break",
+        "prompt": "Keep asking until the guess is correct.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 7: Loop and break\");\n    chapter_2_exercise_7();\n}\n\nfn chapter_2_exercise_7() {\n    // TODO: Keep asking until the guess is correct.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The loop stops on the right guess.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Loop and break."
+        ]
+      },
+      {
+        "id": "ch02-ex08",
+        "chapterNumber": 2,
+        "title": "Shadowing",
+        "conceptFocus": "Shadowing",
+        "prompt": "Shadow a string guess with its parsed number.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 8: Shadowing\");\n    chapter_2_exercise_8();\n}\n\nfn chapter_2_exercise_8() {\n    // TODO: Shadow a string guess with its parsed number.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both bindings are used correctly.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Shadowing."
+        ]
+      },
+      {
+        "id": "ch02-ex09",
+        "chapterNumber": 2,
+        "title": "Dependency setup",
+        "conceptFocus": "Dependency setup",
+        "prompt": "Add `rand` and use it in `main`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 9: Dependency setup\");\n    chapter_2_exercise_9();\n}\n\nfn chapter_2_exercise_9() {\n    // TODO: Add `rand` and use it in `main`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The program builds with the dependency.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on Dependency setup."
+        ]
+      },
+      {
+        "id": "ch02-ex10",
+        "chapterNumber": 2,
+        "title": "User feedback",
+        "conceptFocus": "User feedback",
+        "prompt": "Print a hint after each wrong guess.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 2, exercise 10: User feedback\");\n    chapter_2_exercise_10();\n}\n\nfn chapter_2_exercise_10() {\n    // TODO: Print a hint after each wrong guess.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Wrong guesses show useful hints.",
+        "hints": [
+          "Review Chapter 2.",
+          "Focus on User feedback."
+        ]
+      }
+    ],
+    "3": [
+      {
+        "id": "ch03-ex01",
+        "chapterNumber": 3,
+        "title": "Immutability",
+        "conceptFocus": "Immutability",
+        "prompt": "Try to change an immutable value, then fix it.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 1: Immutability\");\n    chapter_3_exercise_1();\n}\n\nfn chapter_3_exercise_1() {\n    // TODO: Try to change an immutable value, then fix it.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The final code explains the fix.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Immutability."
+        ]
+      },
+      {
+        "id": "ch03-ex02",
+        "chapterNumber": 3,
+        "title": "Mutable variables",
+        "conceptFocus": "Mutable variables",
+        "prompt": "Update a mutable score three times.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 2: Mutable variables\");\n    chapter_3_exercise_2();\n}\n\nfn chapter_3_exercise_2() {\n    // TODO: Update a mutable score three times.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The final score is correct.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Mutable variables."
+        ]
+      },
+      {
+        "id": "ch03-ex03",
+        "chapterNumber": 3,
+        "title": "Shadowing",
+        "conceptFocus": "Shadowing",
+        "prompt": "Convert a string length into a number using shadowing.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 3: Shadowing\");\n    chapter_3_exercise_3();\n}\n\nfn chapter_3_exercise_3() {\n    // TODO: Convert a string length into a number using shadowing.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each shadowed value has the right type.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Shadowing."
+        ]
+      },
+      {
+        "id": "ch03-ex04",
+        "chapterNumber": 3,
+        "title": "Scalar types",
+        "conceptFocus": "Scalar types",
+        "prompt": "Create examples of integer, float, bool, and char.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 4: Scalar types\");\n    chapter_3_exercise_4();\n}\n\nfn chapter_3_exercise_4() {\n    // TODO: Create examples of integer, float, bool, and char.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "All four values are printed.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Scalar types."
+        ]
+      },
+      {
+        "id": "ch03-ex05",
+        "chapterNumber": 3,
+        "title": "Tuples",
+        "conceptFocus": "Tuples",
+        "prompt": "Return a tuple and destructure it.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 5: Tuples\");\n    chapter_3_exercise_5();\n}\n\nfn chapter_3_exercise_5() {\n    // TODO: Return a tuple and destructure it.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each tuple field is used.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Tuples."
+        ]
+      },
+      {
+        "id": "ch03-ex06",
+        "chapterNumber": 3,
+        "title": "Arrays",
+        "conceptFocus": "Arrays",
+        "prompt": "Read the first and last item of an array.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 6: Arrays\");\n    chapter_3_exercise_6();\n}\n\nfn chapter_3_exercise_6() {\n    // TODO: Read the first and last item of an array.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both values print correctly.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Arrays."
+        ]
+      },
+      {
+        "id": "ch03-ex07",
+        "chapterNumber": 3,
+        "title": "Functions",
+        "conceptFocus": "Functions",
+        "prompt": "Write a function that takes two numbers and returns one.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 7: Functions\");\n    chapter_3_exercise_7();\n}\n\nfn chapter_3_exercise_7() {\n    // TODO: Write a function that takes two numbers and returns one.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The function result is printed.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Functions."
+        ]
+      },
+      {
+        "id": "ch03-ex08",
+        "chapterNumber": 3,
+        "title": "Expressions",
+        "conceptFocus": "Expressions",
+        "prompt": "Use an `if` expression to choose a value.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 8: Expressions\");\n    chapter_3_exercise_8();\n}\n\nfn chapter_3_exercise_8() {\n    // TODO: Use an `if` expression to choose a value.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both branches return the same type.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Expressions."
+        ]
+      },
+      {
+        "id": "ch03-ex09",
+        "chapterNumber": 3,
+        "title": "Loops",
+        "conceptFocus": "Loops",
+        "prompt": "Use a loop to count down from five.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 9: Loops\");\n    chapter_3_exercise_9();\n}\n\nfn chapter_3_exercise_9() {\n    // TODO: Use a loop to count down from five.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The loop stops at zero.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Loops."
+        ]
+      },
+      {
+        "id": "ch03-ex10",
+        "chapterNumber": 3,
+        "title": "Comments",
+        "conceptFocus": "Comments",
+        "prompt": "Add one useful comment to a tricky calculation.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 3, exercise 10: Comments\");\n    chapter_3_exercise_10();\n}\n\nfn chapter_3_exercise_10() {\n    // TODO: Add one useful comment to a tricky calculation.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The comment explains the calculation.",
+        "hints": [
+          "Review Chapter 3.",
+          "Focus on Comments."
+        ]
+      }
+    ],
+    "4": [
+      {
+        "id": "ch04-ex01",
+        "chapterNumber": 4,
+        "title": "Move semantics",
+        "conceptFocus": "Move semantics",
+        "prompt": "Move a `String` into a function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 1: Move semantics\");\n    chapter_4_exercise_1();\n}\n\nfn chapter_4_exercise_1() {\n    // TODO: Move a `String` into a function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The moved value is not reused.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Move semantics."
+        ]
+      },
+      {
+        "id": "ch04-ex02",
+        "chapterNumber": 4,
+        "title": "Clone behavior",
+        "conceptFocus": "Clone behavior",
+        "prompt": "Clone a `String` before using it twice.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 2: Clone behavior\");\n    chapter_4_exercise_2();\n}\n\nfn chapter_4_exercise_2() {\n    // TODO: Clone a `String` before using it twice.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both strings print successfully.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Clone behavior."
+        ]
+      },
+      {
+        "id": "ch04-ex03",
+        "chapterNumber": 4,
+        "title": "Borrowing",
+        "conceptFocus": "Borrowing",
+        "prompt": "Borrow a `String` to calculate its length.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 3: Borrowing\");\n    chapter_4_exercise_3();\n}\n\nfn chapter_4_exercise_3() {\n    // TODO: Borrow a `String` to calculate its length.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The caller keeps ownership.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Borrowing."
+        ]
+      },
+      {
+        "id": "ch04-ex04",
+        "chapterNumber": 4,
+        "title": "Mutable references",
+        "conceptFocus": "Mutable references",
+        "prompt": "Change a string through one mutable reference.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 4: Mutable references\");\n    chapter_4_exercise_4();\n}\n\nfn chapter_4_exercise_4() {\n    // TODO: Change a string through one mutable reference.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The original string is updated.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Mutable references."
+        ]
+      },
+      {
+        "id": "ch04-ex05",
+        "chapterNumber": 4,
+        "title": "Reference rules",
+        "conceptFocus": "Reference rules",
+        "prompt": "Fix code with overlapping mutable borrows.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 5: Reference rules\");\n    chapter_4_exercise_5();\n}\n\nfn chapter_4_exercise_5() {\n    // TODO: Fix code with overlapping mutable borrows.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The fixed code compiles.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Reference rules."
+        ]
+      },
+      {
+        "id": "ch04-ex06",
+        "chapterNumber": 4,
+        "title": "Slices",
+        "conceptFocus": "Slices",
+        "prompt": "Return the first word as a string slice.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 6: Slices\");\n    chapter_4_exercise_6();\n}\n\nfn chapter_4_exercise_6() {\n    // TODO: Return the first word as a string slice.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The returned slice is correct.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Slices."
+        ]
+      },
+      {
+        "id": "ch04-ex07",
+        "chapterNumber": 4,
+        "title": "Ownership return",
+        "conceptFocus": "Ownership return",
+        "prompt": "Return ownership from a helper function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 7: Ownership return\");\n    chapter_4_exercise_7();\n}\n\nfn chapter_4_exercise_7() {\n    // TODO: Return ownership from a helper function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The caller receives the value.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Ownership return."
+        ]
+      },
+      {
+        "id": "ch04-ex08",
+        "chapterNumber": 4,
+        "title": "Dangling prevention",
+        "conceptFocus": "Dangling prevention",
+        "prompt": "Fix a function that would return a dangling reference.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 8: Dangling prevention\");\n    chapter_4_exercise_8();\n}\n\nfn chapter_4_exercise_8() {\n    // TODO: Fix a function that would return a dangling reference.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The function returns valid data.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Dangling prevention."
+        ]
+      },
+      {
+        "id": "ch04-ex09",
+        "chapterNumber": 4,
+        "title": "String storage",
+        "conceptFocus": "String storage",
+        "prompt": "Compare a string literal and a `String`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 9: String storage\");\n    chapter_4_exercise_9();\n}\n\nfn chapter_4_exercise_9() {\n    // TODO: Compare a string literal and a `String`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The code shows both forms.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on String storage."
+        ]
+      },
+      {
+        "id": "ch04-ex10",
+        "chapterNumber": 4,
+        "title": "Borrow scopes",
+        "conceptFocus": "Borrow scopes",
+        "prompt": "Shorten a borrow scope so mutation can happen later.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 4, exercise 10: Borrow scopes\");\n    chapter_4_exercise_10();\n}\n\nfn chapter_4_exercise_10() {\n    // TODO: Shorten a borrow scope so mutation can happen later.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Borrowing and mutation both compile.",
+        "hints": [
+          "Review Chapter 4.",
+          "Focus on Borrow scopes."
+        ]
+      }
+    ],
+    "5": [
+      {
+        "id": "ch05-ex01",
+        "chapterNumber": 5,
+        "title": "Struct fields",
+        "conceptFocus": "Struct fields",
+        "prompt": "Define a `Book` struct and create one value.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 1: Struct fields\");\n    chapter_5_exercise_1();\n}\n\nfn chapter_5_exercise_1() {\n    // TODO: Define a `Book` struct and create one value.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The fields are read and printed.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Struct fields."
+        ]
+      },
+      {
+        "id": "ch05-ex02",
+        "chapterNumber": 5,
+        "title": "Field init shorthand",
+        "conceptFocus": "Field init shorthand",
+        "prompt": "Build a struct using field init shorthand.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 2: Field init shorthand\");\n    chapter_5_exercise_2();\n}\n\nfn chapter_5_exercise_2() {\n    // TODO: Build a struct using field init shorthand.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The shorthand fields are correct.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Field init shorthand."
+        ]
+      },
+      {
+        "id": "ch05-ex03",
+        "chapterNumber": 5,
+        "title": "Struct update syntax",
+        "conceptFocus": "Struct update syntax",
+        "prompt": "Create a second value with struct update syntax.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 3: Struct update syntax\");\n    chapter_5_exercise_3();\n}\n\nfn chapter_5_exercise_3() {\n    // TODO: Create a second value with struct update syntax.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only the changed fields differ.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Struct update syntax."
+        ]
+      },
+      {
+        "id": "ch05-ex04",
+        "chapterNumber": 5,
+        "title": "Tuple structs",
+        "conceptFocus": "Tuple structs",
+        "prompt": "Create `Color` and `Point` tuple structs.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 4: Tuple structs\");\n    chapter_5_exercise_4();\n}\n\nfn chapter_5_exercise_4() {\n    // TODO: Create `Color` and `Point` tuple structs.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both tuple structs are used.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Tuple structs."
+        ]
+      },
+      {
+        "id": "ch05-ex05",
+        "chapterNumber": 5,
+        "title": "Debug output",
+        "conceptFocus": "Debug output",
+        "prompt": "Derive `Debug` and print a struct with `dbg!`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 5: Debug output\");\n    chapter_5_exercise_5();\n}\n\nfn chapter_5_exercise_5() {\n    // TODO: Derive `Debug` and print a struct with `dbg!`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The debug output is visible.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Debug output."
+        ]
+      },
+      {
+        "id": "ch05-ex06",
+        "chapterNumber": 5,
+        "title": "Area function",
+        "conceptFocus": "Area function",
+        "prompt": "Replace separate width and height with a `Rectangle`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 6: Area function\");\n    chapter_5_exercise_6();\n}\n\nfn chapter_5_exercise_6() {\n    // TODO: Replace separate width and height with a `Rectangle`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Area is calculated from the struct.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Area function."
+        ]
+      },
+      {
+        "id": "ch05-ex07",
+        "chapterNumber": 5,
+        "title": "Methods",
+        "conceptFocus": "Methods",
+        "prompt": "Add an `area` method to `Rectangle`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 7: Methods\");\n    chapter_5_exercise_7();\n}\n\nfn chapter_5_exercise_7() {\n    // TODO: Add an `area` method to `Rectangle`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Calling the method returns the area.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Methods."
+        ]
+      },
+      {
+        "id": "ch05-ex08",
+        "chapterNumber": 5,
+        "title": "Borrowed self",
+        "conceptFocus": "Borrowed self",
+        "prompt": "Write a method that reads `self` without moving it.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 8: Borrowed self\");\n    chapter_5_exercise_8();\n}\n\nfn chapter_5_exercise_8() {\n    // TODO: Write a method that reads `self` without moving it.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The value can be used after the call.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Borrowed self."
+        ]
+      },
+      {
+        "id": "ch05-ex09",
+        "chapterNumber": 5,
+        "title": "Mutable self",
+        "conceptFocus": "Mutable self",
+        "prompt": "Write a method that changes one field.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 9: Mutable self\");\n    chapter_5_exercise_9();\n}\n\nfn chapter_5_exercise_9() {\n    // TODO: Write a method that changes one field.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The struct updates in place.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Mutable self."
+        ]
+      },
+      {
+        "id": "ch05-ex10",
+        "chapterNumber": 5,
+        "title": "Associated function",
+        "conceptFocus": "Associated function",
+        "prompt": "Add a `square` constructor.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 5, exercise 10: Associated function\");\n    chapter_5_exercise_10();\n}\n\nfn chapter_5_exercise_10() {\n    // TODO: Add a `square` constructor.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`Rectangle::square` creates equal sides.",
+        "hints": [
+          "Review Chapter 5.",
+          "Focus on Associated function."
+        ]
+      }
+    ],
+    "6": [
+      {
+        "id": "ch06-ex01",
+        "chapterNumber": 6,
+        "title": "Enum variants",
+        "conceptFocus": "Enum variants",
+        "prompt": "Define a `TrafficLight` enum and match each color.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 1: Enum variants\");\n    chapter_6_exercise_1();\n}\n\nfn chapter_6_exercise_1() {\n    // TODO: Define a `TrafficLight` enum and match each color.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Every color has an action.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Enum variants."
+        ]
+      },
+      {
+        "id": "ch06-ex02",
+        "chapterNumber": 6,
+        "title": "Data variants",
+        "conceptFocus": "Data variants",
+        "prompt": "Store data inside an enum variant.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 2: Data variants\");\n    chapter_6_exercise_2();\n}\n\nfn chapter_6_exercise_2() {\n    // TODO: Store data inside an enum variant.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The stored data is printed.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Data variants."
+        ]
+      },
+      {
+        "id": "ch06-ex03",
+        "chapterNumber": 6,
+        "title": "Option",
+        "conceptFocus": "Option",
+        "prompt": "Return `Some` for a found item and `None` otherwise.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 3: Option\");\n    chapter_6_exercise_3();\n}\n\nfn chapter_6_exercise_3() {\n    // TODO: Return `Some` for a found item and `None` otherwise.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both cases are handled.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Option."
+        ]
+      },
+      {
+        "id": "ch06-ex04",
+        "chapterNumber": 6,
+        "title": "Match exhaustiveness",
+        "conceptFocus": "Match exhaustiveness",
+        "prompt": "Add the missing match arm.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 4: Match exhaustiveness\");\n    chapter_6_exercise_4();\n}\n\nfn chapter_6_exercise_4() {\n    // TODO: Add the missing match arm.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The match covers every variant.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Match exhaustiveness."
+        ]
+      },
+      {
+        "id": "ch06-ex05",
+        "chapterNumber": 6,
+        "title": "Pattern binding",
+        "conceptFocus": "Pattern binding",
+        "prompt": "Bind a value inside a match arm.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 5: Pattern binding\");\n    chapter_6_exercise_5();\n}\n\nfn chapter_6_exercise_5() {\n    // TODO: Bind a value inside a match arm.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The bound value is used.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Pattern binding."
+        ]
+      },
+      {
+        "id": "ch06-ex06",
+        "chapterNumber": 6,
+        "title": "if let",
+        "conceptFocus": "if let",
+        "prompt": "Use `if let` for one `Option` case.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 6: if let\");\n    chapter_6_exercise_6();\n}\n\nfn chapter_6_exercise_6() {\n    // TODO: Use `if let` for one `Option` case.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only the `Some` case prints.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on if let."
+        ]
+      },
+      {
+        "id": "ch06-ex07",
+        "chapterNumber": 6,
+        "title": "let else",
+        "conceptFocus": "let else",
+        "prompt": "Use `let else` to exit on `None`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 7: let else\");\n    chapter_6_exercise_7();\n}\n\nfn chapter_6_exercise_7() {\n    // TODO: Use `let else` to exit on `None`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The early exit is clear.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on let else."
+        ]
+      },
+      {
+        "id": "ch06-ex08",
+        "chapterNumber": 6,
+        "title": "Fallback arm",
+        "conceptFocus": "Fallback arm",
+        "prompt": "Handle all other values with `_`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 8: Fallback arm\");\n    chapter_6_exercise_8();\n}\n\nfn chapter_6_exercise_8() {\n    // TODO: Handle all other values with `_`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Unhandled values use the fallback.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Fallback arm."
+        ]
+      },
+      {
+        "id": "ch06-ex09",
+        "chapterNumber": 6,
+        "title": "Nested enums",
+        "conceptFocus": "Nested enums",
+        "prompt": "Match an enum that contains another enum.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 9: Nested enums\");\n    chapter_6_exercise_9();\n}\n\nfn chapter_6_exercise_9() {\n    // TODO: Match an enum that contains another enum.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The nested case is handled.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Nested enums."
+        ]
+      },
+      {
+        "id": "ch06-ex10",
+        "chapterNumber": 6,
+        "title": "Domain model",
+        "conceptFocus": "Domain model",
+        "prompt": "Model a small order status with an enum.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 6, exercise 10: Domain model\");\n    chapter_6_exercise_10();\n}\n\nfn chapter_6_exercise_10() {\n    // TODO: Model a small order status with an enum.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each status has distinct behavior.",
+        "hints": [
+          "Review Chapter 6.",
+          "Focus on Domain model."
+        ]
+      }
+    ],
+    "7": [
+      {
+        "id": "ch07-ex01",
+        "chapterNumber": 7,
+        "title": "Module basics",
+        "conceptFocus": "Module basics",
+        "prompt": "Create a module with one public function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 1: Module basics\");\n    chapter_7_exercise_1();\n}\n\nfn chapter_7_exercise_1() {\n    // TODO: Create a module with one public function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The function is called from `main`.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Module basics."
+        ]
+      },
+      {
+        "id": "ch07-ex02",
+        "chapterNumber": 7,
+        "title": "Library crate",
+        "conceptFocus": "Library crate",
+        "prompt": "Move a helper into `src/lib.rs`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 2: Library crate\");\n    chapter_7_exercise_2();\n}\n\nfn chapter_7_exercise_2() {\n    // TODO: Move a helper into `src/lib.rs`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`main.rs` calls the library helper.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Library crate."
+        ]
+      },
+      {
+        "id": "ch07-ex03",
+        "chapterNumber": 7,
+        "title": "Module tree",
+        "conceptFocus": "Module tree",
+        "prompt": "Build a two-level restaurant module tree.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 3: Module tree\");\n    chapter_7_exercise_3();\n}\n\nfn chapter_7_exercise_3() {\n    // TODO: Build a two-level restaurant module tree.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "A nested function is reachable.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Module tree."
+        ]
+      },
+      {
+        "id": "ch07-ex04",
+        "chapterNumber": 7,
+        "title": "Privacy",
+        "conceptFocus": "Privacy",
+        "prompt": "Hide a helper behind a public wrapper.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 4: Privacy\");\n    chapter_7_exercise_4();\n}\n\nfn chapter_7_exercise_4() {\n    // TODO: Hide a helper behind a public wrapper.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only the wrapper is public.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Privacy."
+        ]
+      },
+      {
+        "id": "ch07-ex05",
+        "chapterNumber": 7,
+        "title": "Paths",
+        "conceptFocus": "Paths",
+        "prompt": "Call one item with an absolute path and one with a relative path.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 5: Paths\");\n    chapter_7_exercise_5();\n}\n\nfn chapter_7_exercise_5() {\n    // TODO: Call one item with an absolute path and one with a relative path.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both paths compile.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Paths."
+        ]
+      },
+      {
+        "id": "ch07-ex06",
+        "chapterNumber": 7,
+        "title": "use imports",
+        "conceptFocus": "use imports",
+        "prompt": "Shorten a long path with `use`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 6: use imports\");\n    chapter_7_exercise_6();\n}\n\nfn chapter_7_exercise_6() {\n    // TODO: Shorten a long path with `use`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The shorter name is used.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on use imports."
+        ]
+      },
+      {
+        "id": "ch07-ex07",
+        "chapterNumber": 7,
+        "title": "Renamed imports",
+        "conceptFocus": "Renamed imports",
+        "prompt": "Use `as` to avoid an import name conflict.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 7: Renamed imports\");\n    chapter_7_exercise_7();\n}\n\nfn chapter_7_exercise_7() {\n    // TODO: Use `as` to avoid an import name conflict.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both imported names are distinct.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Renamed imports."
+        ]
+      },
+      {
+        "id": "ch07-ex08",
+        "chapterNumber": 7,
+        "title": "Re-exports",
+        "conceptFocus": "Re-exports",
+        "prompt": "Expose a nested type with `pub use`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 8: Re-exports\");\n    chapter_7_exercise_8();\n}\n\nfn chapter_7_exercise_8() {\n    // TODO: Expose a nested type with `pub use`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Callers use the re-exported path.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Re-exports."
+        ]
+      },
+      {
+        "id": "ch07-ex09",
+        "chapterNumber": 7,
+        "title": "Separate files",
+        "conceptFocus": "Separate files",
+        "prompt": "Move one module into its own file.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 9: Separate files\");\n    chapter_7_exercise_9();\n}\n\nfn chapter_7_exercise_9() {\n    // TODO: Move one module into its own file.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The module still compiles.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Separate files."
+        ]
+      },
+      {
+        "id": "ch07-ex10",
+        "chapterNumber": 7,
+        "title": "Public API",
+        "conceptFocus": "Public API",
+        "prompt": "Expose two public functions and keep helpers private.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 7, exercise 10: Public API\");\n    chapter_7_exercise_10();\n}\n\nfn chapter_7_exercise_10() {\n    // TODO: Expose two public functions and keep helpers private.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The public API stays small.",
+        "hints": [
+          "Review Chapter 7.",
+          "Focus on Public API."
+        ]
+      }
+    ],
+    "8": [
+      {
+        "id": "ch08-ex01",
+        "chapterNumber": 8,
+        "title": "Vectors",
+        "conceptFocus": "Vectors",
+        "prompt": "Push three numbers into a `Vec` and print them.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 1: Vectors\");\n    chapter_8_exercise_1();\n}\n\nfn chapter_8_exercise_1() {\n    // TODO: Push three numbers into a `Vec` and print them.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "All numbers are stored.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Vectors."
+        ]
+      },
+      {
+        "id": "ch08-ex02",
+        "chapterNumber": 8,
+        "title": "Vector access",
+        "conceptFocus": "Vector access",
+        "prompt": "Use `get` to read a vector item safely.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 2: Vector access\");\n    chapter_8_exercise_2();\n}\n\nfn chapter_8_exercise_2() {\n    // TODO: Use `get` to read a vector item safely.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Missing indexes return `None`.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Vector access."
+        ]
+      },
+      {
+        "id": "ch08-ex03",
+        "chapterNumber": 8,
+        "title": "Mutable iteration",
+        "conceptFocus": "Mutable iteration",
+        "prompt": "Add one to every number in a vector.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 3: Mutable iteration\");\n    chapter_8_exercise_3();\n}\n\nfn chapter_8_exercise_3() {\n    // TODO: Add one to every number in a vector.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The vector values change.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Mutable iteration."
+        ]
+      },
+      {
+        "id": "ch08-ex04",
+        "chapterNumber": 8,
+        "title": "String building",
+        "conceptFocus": "String building",
+        "prompt": "Build a `String` with `push_str` and `push`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 4: String building\");\n    chapter_8_exercise_4();\n}\n\nfn chapter_8_exercise_4() {\n    // TODO: Build a `String` with `push_str` and `push`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The final string is correct.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on String building."
+        ]
+      },
+      {
+        "id": "ch08-ex05",
+        "chapterNumber": 8,
+        "title": "format!",
+        "conceptFocus": "format!",
+        "prompt": "Combine strings without taking ownership.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 5: format!\");\n    chapter_8_exercise_5();\n}\n\nfn chapter_8_exercise_5() {\n    // TODO: Combine strings without taking ownership.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The original strings remain usable.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on format!."
+        ]
+      },
+      {
+        "id": "ch08-ex06",
+        "chapterNumber": 8,
+        "title": "UTF-8 chars",
+        "conceptFocus": "UTF-8 chars",
+        "prompt": "Print the characters in a UTF-8 string.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 6: UTF-8 chars\");\n    chapter_8_exercise_6();\n}\n\nfn chapter_8_exercise_6() {\n    // TODO: Print the characters in a UTF-8 string.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Multibyte characters stay intact.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on UTF-8 chars."
+        ]
+      },
+      {
+        "id": "ch08-ex07",
+        "chapterNumber": 8,
+        "title": "Hash maps",
+        "conceptFocus": "Hash maps",
+        "prompt": "Insert and read scores in a `HashMap`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 7: Hash maps\");\n    chapter_8_exercise_7();\n}\n\nfn chapter_8_exercise_7() {\n    // TODO: Insert and read scores in a `HashMap`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "A known key returns its score.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Hash maps."
+        ]
+      },
+      {
+        "id": "ch08-ex08",
+        "chapterNumber": 8,
+        "title": "Entry API",
+        "conceptFocus": "Entry API",
+        "prompt": "Count words with `entry` and `or_insert`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 8: Entry API\");\n    chapter_8_exercise_8();\n}\n\nfn chapter_8_exercise_8() {\n    // TODO: Count words with `entry` and `or_insert`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Repeated words increment counts.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Entry API."
+        ]
+      },
+      {
+        "id": "ch08-ex09",
+        "chapterNumber": 8,
+        "title": "Ownership in maps",
+        "conceptFocus": "Ownership in maps",
+        "prompt": "Move owned strings into a `HashMap`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 9: Ownership in maps\");\n    chapter_8_exercise_9();\n}\n\nfn chapter_8_exercise_9() {\n    // TODO: Move owned strings into a `HashMap`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Moved keys are not reused.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Ownership in maps."
+        ]
+      },
+      {
+        "id": "ch08-ex10",
+        "chapterNumber": 8,
+        "title": "Collection choice",
+        "conceptFocus": "Collection choice",
+        "prompt": "Use a vector for order and a map for lookup.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 8, exercise 10: Collection choice\");\n    chapter_8_exercise_10();\n}\n\nfn chapter_8_exercise_10() {\n    // TODO: Use a vector for order and a map for lookup.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each collection has a clear job.",
+        "hints": [
+          "Review Chapter 8.",
+          "Focus on Collection choice."
+        ]
+      }
+    ],
+    "9": [
+      {
+        "id": "ch09-ex01",
+        "chapterNumber": 9,
+        "title": "panic!",
+        "conceptFocus": "panic!",
+        "prompt": "Write a function that panics on an invalid index.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 1: panic!\");\n    chapter_9_exercise_1();\n}\n\nfn chapter_9_exercise_1() {\n    // TODO: Write a function that panics on an invalid index.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The panic happens only for bad input.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on panic!."
+        ]
+      },
+      {
+        "id": "ch09-ex02",
+        "chapterNumber": 9,
+        "title": "Result",
+        "conceptFocus": "Result",
+        "prompt": "Return `Result<i32, String>` from a parser.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 2: Result\");\n    chapter_9_exercise_2();\n}\n\nfn chapter_9_exercise_2() {\n    // TODO: Return `Result<i32, String>` from a parser.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Good and bad input are represented.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on Result."
+        ]
+      },
+      {
+        "id": "ch09-ex03",
+        "chapterNumber": 9,
+        "title": "Matching errors",
+        "conceptFocus": "Matching errors",
+        "prompt": "Handle `Ok` and `Err` with `match`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 3: Matching errors\");\n    chapter_9_exercise_3();\n}\n\nfn chapter_9_exercise_3() {\n    // TODO: Handle `Ok` and `Err` with `match`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both branches print useful output.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on Matching errors."
+        ]
+      },
+      {
+        "id": "ch09-ex04",
+        "chapterNumber": 9,
+        "title": "Propagation",
+        "conceptFocus": "Propagation",
+        "prompt": "Propagate a parse error from a helper.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 4: Propagation\");\n    chapter_9_exercise_4();\n}\n\nfn chapter_9_exercise_4() {\n    // TODO: Propagate a parse error from a helper.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The caller handles the error.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on Propagation."
+        ]
+      },
+      {
+        "id": "ch09-ex05",
+        "chapterNumber": 9,
+        "title": "? operator",
+        "conceptFocus": "? operator",
+        "prompt": "Replace nested matches with `?`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 5: ? operator\");\n    chapter_9_exercise_5();\n}\n\nfn chapter_9_exercise_5() {\n    // TODO: Replace nested matches with `?`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The behavior stays the same.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on ? operator."
+        ]
+      },
+      {
+        "id": "ch09-ex06",
+        "chapterNumber": 9,
+        "title": "Custom error",
+        "conceptFocus": "Custom error",
+        "prompt": "Create a small custom error enum.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 6: Custom error\");\n    chapter_9_exercise_6();\n}\n\nfn chapter_9_exercise_6() {\n    // TODO: Create a small custom error enum.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each error kind has its own variant.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on Custom error."
+        ]
+      },
+      {
+        "id": "ch09-ex07",
+        "chapterNumber": 9,
+        "title": "expect message",
+        "conceptFocus": "expect message",
+        "prompt": "Use `expect` with a specific message.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 7: expect message\");\n    chapter_9_exercise_7();\n}\n\nfn chapter_9_exercise_7() {\n    // TODO: Use `expect` with a specific message.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The message explains the assumption.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on expect message."
+        ]
+      },
+      {
+        "id": "ch09-ex08",
+        "chapterNumber": 9,
+        "title": "Input validation",
+        "conceptFocus": "Input validation",
+        "prompt": "Reject an empty username with `Result`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 8: Input validation\");\n    chapter_9_exercise_8();\n}\n\nfn chapter_9_exercise_8() {\n    // TODO: Reject an empty username with `Result`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Empty input returns an error.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on Input validation."
+        ]
+      },
+      {
+        "id": "ch09-ex09",
+        "chapterNumber": 9,
+        "title": "Error boundary",
+        "conceptFocus": "Error boundary",
+        "prompt": "Handle errors in `main` and keep helpers clean.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 9: Error boundary\");\n    chapter_9_exercise_9();\n}\n\nfn chapter_9_exercise_9() {\n    // TODO: Handle errors in `main` and keep helpers clean.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`main` prints the final error.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on Error boundary."
+        ]
+      },
+      {
+        "id": "ch09-ex10",
+        "chapterNumber": 9,
+        "title": "API choice",
+        "conceptFocus": "API choice",
+        "prompt": "Choose `panic!` or `Result` for two tiny functions.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 9, exercise 10: API choice\");\n    chapter_9_exercise_10();\n}\n\nfn chapter_9_exercise_10() {\n    // TODO: Choose `panic!` or `Result` for two tiny functions.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The choice matches the failure kind.",
+        "hints": [
+          "Review Chapter 9.",
+          "Focus on API choice."
+        ]
+      }
+    ],
+    "10": [
+      {
+        "id": "ch10-ex01",
+        "chapterNumber": 10,
+        "title": "Generic function",
+        "conceptFocus": "Generic function",
+        "prompt": "Write `largest` for any ordered slice.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 1: Generic function\");\n    chapter_10_exercise_1();\n}\n\nfn chapter_10_exercise_1() {\n    // TODO: Write `largest` for any ordered slice.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "It works for numbers and chars.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Generic function."
+        ]
+      },
+      {
+        "id": "ch10-ex02",
+        "chapterNumber": 10,
+        "title": "Generic struct",
+        "conceptFocus": "Generic struct",
+        "prompt": "Create `Point<T>` and read its fields.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 2: Generic struct\");\n    chapter_10_exercise_2();\n}\n\nfn chapter_10_exercise_2() {\n    // TODO: Create `Point<T>` and read its fields.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Two point types compile.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Generic struct."
+        ]
+      },
+      {
+        "id": "ch10-ex03",
+        "chapterNumber": 10,
+        "title": "Mixed generics",
+        "conceptFocus": "Mixed generics",
+        "prompt": "Create `Point<T, U>` with different field types.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 3: Mixed generics\");\n    chapter_10_exercise_3();\n}\n\nfn chapter_10_exercise_3() {\n    // TODO: Create `Point<T, U>` with different field types.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The fields can have different types.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Mixed generics."
+        ]
+      },
+      {
+        "id": "ch10-ex04",
+        "chapterNumber": 10,
+        "title": "Trait definition",
+        "conceptFocus": "Trait definition",
+        "prompt": "Define a `Summary` trait and implement it.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 4: Trait definition\");\n    chapter_10_exercise_4();\n}\n\nfn chapter_10_exercise_4() {\n    // TODO: Define a `Summary` trait and implement it.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Calling `summarize` works.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Trait definition."
+        ]
+      },
+      {
+        "id": "ch10-ex05",
+        "chapterNumber": 10,
+        "title": "Trait bounds",
+        "conceptFocus": "Trait bounds",
+        "prompt": "Write a function that accepts `Summary` items.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 5: Trait bounds\");\n    chapter_10_exercise_5();\n}\n\nfn chapter_10_exercise_5() {\n    // TODO: Write a function that accepts `Summary` items.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only summarizable values compile.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Trait bounds."
+        ]
+      },
+      {
+        "id": "ch10-ex06",
+        "chapterNumber": 10,
+        "title": "impl Trait",
+        "conceptFocus": "impl Trait",
+        "prompt": "Return a value with `impl Summary`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 6: impl Trait\");\n    chapter_10_exercise_6();\n}\n\nfn chapter_10_exercise_6() {\n    // TODO: Return a value with `impl Summary`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The caller can call trait methods.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on impl Trait."
+        ]
+      },
+      {
+        "id": "ch10-ex07",
+        "chapterNumber": 10,
+        "title": "where clause",
+        "conceptFocus": "where clause",
+        "prompt": "Move complex bounds into a `where` clause.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 7: where clause\");\n    chapter_10_exercise_7();\n}\n\nfn chapter_10_exercise_7() {\n    // TODO: Move complex bounds into a `where` clause.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The signature stays readable.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on where clause."
+        ]
+      },
+      {
+        "id": "ch10-ex08",
+        "chapterNumber": 10,
+        "title": "Lifetimes",
+        "conceptFocus": "Lifetimes",
+        "prompt": "Return the longer of two string slices.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 8: Lifetimes\");\n    chapter_10_exercise_8();\n}\n\nfn chapter_10_exercise_8() {\n    // TODO: Return the longer of two string slices.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The returned slice is valid.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Lifetimes."
+        ]
+      },
+      {
+        "id": "ch10-ex09",
+        "chapterNumber": 10,
+        "title": "Lifetime elision",
+        "conceptFocus": "Lifetime elision",
+        "prompt": "Write a method that relies on elision rules.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 9: Lifetime elision\");\n    chapter_10_exercise_9();\n}\n\nfn chapter_10_exercise_9() {\n    // TODO: Write a method that relies on elision rules.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The method compiles without named lifetimes.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Lifetime elision."
+        ]
+      },
+      {
+        "id": "ch10-ex10",
+        "chapterNumber": 10,
+        "title": "Borrowed return",
+        "conceptFocus": "Borrowed return",
+        "prompt": "Return a reference stored inside a struct.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 10, exercise 10: Borrowed return\");\n    chapter_10_exercise_10();\n}\n\nfn chapter_10_exercise_10() {\n    // TODO: Return a reference stored inside a struct.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The reference cannot outlive the struct.",
+        "hints": [
+          "Review Chapter 10.",
+          "Focus on Borrowed return."
+        ]
+      }
+    ],
+    "11": [
+      {
+        "id": "ch11-ex01",
+        "chapterNumber": 11,
+        "title": "Unit test",
+        "conceptFocus": "Unit test",
+        "prompt": "Add a unit test for an `add_two` function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 1: Unit test\");\n    chapter_11_exercise_1();\n}\n\nfn chapter_11_exercise_1() {\n    // TODO: Add a unit test for an `add_two` function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The test passes.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Unit test."
+        ]
+      },
+      {
+        "id": "ch11-ex02",
+        "chapterNumber": 11,
+        "title": "assert_eq!",
+        "conceptFocus": "assert_eq!",
+        "prompt": "Use `assert_eq!` for an exact result.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 2: assert_eq!\");\n    chapter_11_exercise_2();\n}\n\nfn chapter_11_exercise_2() {\n    // TODO: Use `assert_eq!` for an exact result.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The expected value is checked.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on assert_eq!."
+        ]
+      },
+      {
+        "id": "ch11-ex03",
+        "chapterNumber": 11,
+        "title": "Custom message",
+        "conceptFocus": "Custom message",
+        "prompt": "Add a custom failure message to `assert!`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 3: Custom message\");\n    chapter_11_exercise_3();\n}\n\nfn chapter_11_exercise_3() {\n    // TODO: Add a custom failure message to `assert!`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The message includes the bad value.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Custom message."
+        ]
+      },
+      {
+        "id": "ch11-ex04",
+        "chapterNumber": 11,
+        "title": "should_panic",
+        "conceptFocus": "should_panic",
+        "prompt": "Test that invalid input panics.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 4: should_panic\");\n    chapter_11_exercise_4();\n}\n\nfn chapter_11_exercise_4() {\n    // TODO: Test that invalid input panics.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The panic test passes.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on should_panic."
+        ]
+      },
+      {
+        "id": "ch11-ex05",
+        "chapterNumber": 11,
+        "title": "Result test",
+        "conceptFocus": "Result test",
+        "prompt": "Write a test that returns `Result<(), String>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 5: Result test\");\n    chapter_11_exercise_5();\n}\n\nfn chapter_11_exercise_5() {\n    // TODO: Write a test that returns `Result<(), String>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The test uses `?` for setup.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Result test."
+        ]
+      },
+      {
+        "id": "ch11-ex06",
+        "chapterNumber": 11,
+        "title": "Test filters",
+        "conceptFocus": "Test filters",
+        "prompt": "Name tests so one can be run by keyword.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 6: Test filters\");\n    chapter_11_exercise_6();\n}\n\nfn chapter_11_exercise_6() {\n    // TODO: Name tests so one can be run by keyword.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "A filtered test run selects one test.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Test filters."
+        ]
+      },
+      {
+        "id": "ch11-ex07",
+        "chapterNumber": 11,
+        "title": "Ignored test",
+        "conceptFocus": "Ignored test",
+        "prompt": "Mark a slow test with `#[ignore]`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 7: Ignored test\");\n    chapter_11_exercise_7();\n}\n\nfn chapter_11_exercise_7() {\n    // TODO: Mark a slow test with `#[ignore]`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Normal test runs skip it.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Ignored test."
+        ]
+      },
+      {
+        "id": "ch11-ex08",
+        "chapterNumber": 11,
+        "title": "Integration test",
+        "conceptFocus": "Integration test",
+        "prompt": "Add an integration test in `tests/`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 8: Integration test\");\n    chapter_11_exercise_8();\n}\n\nfn chapter_11_exercise_8() {\n    // TODO: Add an integration test in `tests/`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The test uses the public API.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Integration test."
+        ]
+      },
+      {
+        "id": "ch11-ex09",
+        "chapterNumber": 11,
+        "title": "Private helper",
+        "conceptFocus": "Private helper",
+        "prompt": "Test a private helper inside its module.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 9: Private helper\");\n    chapter_11_exercise_9();\n}\n\nfn chapter_11_exercise_9() {\n    // TODO: Test a private helper inside its module.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The helper test passes.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Private helper."
+        ]
+      },
+      {
+        "id": "ch11-ex10",
+        "chapterNumber": 11,
+        "title": "Test organization",
+        "conceptFocus": "Test organization",
+        "prompt": "Group related tests in a test module.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 11, exercise 10: Test organization\");\n    chapter_11_exercise_10();\n}\n\nfn chapter_11_exercise_10() {\n    // TODO: Group related tests in a test module.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The module keeps tests readable.",
+        "hints": [
+          "Review Chapter 11.",
+          "Focus on Test organization."
+        ]
+      }
+    ],
+    "12": [
+      {
+        "id": "ch12-ex01",
+        "chapterNumber": 12,
+        "title": "Arguments",
+        "conceptFocus": "Arguments",
+        "prompt": "Read a query and file path from `env::args`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 1: Arguments\");\n    chapter_12_exercise_1();\n}\n\nfn chapter_12_exercise_1() {\n    // TODO: Read a query and file path from `env::args`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both arguments are captured.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Arguments."
+        ]
+      },
+      {
+        "id": "ch12-ex02",
+        "chapterNumber": 12,
+        "title": "File reading",
+        "conceptFocus": "File reading",
+        "prompt": "Read a file into a string.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 2: File reading\");\n    chapter_12_exercise_2();\n}\n\nfn chapter_12_exercise_2() {\n    // TODO: Read a file into a string.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The file contents are printed.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on File reading."
+        ]
+      },
+      {
+        "id": "ch12-ex03",
+        "chapterNumber": 12,
+        "title": "Config struct",
+        "conceptFocus": "Config struct",
+        "prompt": "Build a `Config` from command arguments.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 3: Config struct\");\n    chapter_12_exercise_3();\n}\n\nfn chapter_12_exercise_3() {\n    // TODO: Build a `Config` from command arguments.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Missing arguments return an error.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Config struct."
+        ]
+      },
+      {
+        "id": "ch12-ex04",
+        "chapterNumber": 12,
+        "title": "Error handling",
+        "conceptFocus": "Error handling",
+        "prompt": "Return `Result` from the CLI setup code.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 4: Error handling\");\n    chapter_12_exercise_4();\n}\n\nfn chapter_12_exercise_4() {\n    // TODO: Return `Result` from the CLI setup code.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Setup failures are handled.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Error handling."
+        ]
+      },
+      {
+        "id": "ch12-ex05",
+        "chapterNumber": 12,
+        "title": "Library split",
+        "conceptFocus": "Library split",
+        "prompt": "Move search logic into `lib.rs`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 5: Library split\");\n    chapter_12_exercise_5();\n}\n\nfn chapter_12_exercise_5() {\n    // TODO: Move search logic into `lib.rs`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`main.rs` stays small.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Library split."
+        ]
+      },
+      {
+        "id": "ch12-ex06",
+        "chapterNumber": 12,
+        "title": "TDD search",
+        "conceptFocus": "TDD search",
+        "prompt": "Write a failing search test, then make it pass.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 6: TDD search\");\n    chapter_12_exercise_6();\n}\n\nfn chapter_12_exercise_6() {\n    // TODO: Write a failing search test, then make it pass.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The search test passes.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on TDD search."
+        ]
+      },
+      {
+        "id": "ch12-ex07",
+        "chapterNumber": 12,
+        "title": "Case sensitivity",
+        "conceptFocus": "Case sensitivity",
+        "prompt": "Use an env var to switch search mode.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 7: Case sensitivity\");\n    chapter_12_exercise_7();\n}\n\nfn chapter_12_exercise_7() {\n    // TODO: Use an env var to switch search mode.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The mode changes with the env var.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Case sensitivity."
+        ]
+      },
+      {
+        "id": "ch12-ex08",
+        "chapterNumber": 12,
+        "title": "stderr",
+        "conceptFocus": "stderr",
+        "prompt": "Print errors with `eprintln!`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 8: stderr\");\n    chapter_12_exercise_8();\n}\n\nfn chapter_12_exercise_8() {\n    // TODO: Print errors with `eprintln!`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Errors go to standard error.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on stderr."
+        ]
+      },
+      {
+        "id": "ch12-ex09",
+        "chapterNumber": 12,
+        "title": "Iterators",
+        "conceptFocus": "Iterators",
+        "prompt": "Rewrite search with iterator adapters.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 9: Iterators\");\n    chapter_12_exercise_9();\n}\n\nfn chapter_12_exercise_9() {\n    // TODO: Rewrite search with iterator adapters.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Search results stay the same.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Iterators."
+        ]
+      },
+      {
+        "id": "ch12-ex10",
+        "chapterNumber": 12,
+        "title": "Separation",
+        "conceptFocus": "Separation",
+        "prompt": "Keep parsing, searching, and printing in separate functions.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 12, exercise 10: Separation\");\n    chapter_12_exercise_10();\n}\n\nfn chapter_12_exercise_10() {\n    // TODO: Keep parsing, searching, and printing in separate functions.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each function has one job.",
+        "hints": [
+          "Review Chapter 12.",
+          "Focus on Separation."
+        ]
+      }
+    ],
+    "13": [
+      {
+        "id": "ch13-ex01",
+        "chapterNumber": 13,
+        "title": "Closure basics",
+        "conceptFocus": "Closure basics",
+        "prompt": "Store a closure and call it twice.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 1: Closure basics\");\n    chapter_13_exercise_1();\n}\n\nfn chapter_13_exercise_1() {\n    // TODO: Store a closure and call it twice.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both calls return expected values.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Closure basics."
+        ]
+      },
+      {
+        "id": "ch13-ex02",
+        "chapterNumber": 13,
+        "title": "Closure capture",
+        "conceptFocus": "Closure capture",
+        "prompt": "Capture a variable from the surrounding scope.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 2: Closure capture\");\n    chapter_13_exercise_2();\n}\n\nfn chapter_13_exercise_2() {\n    // TODO: Capture a variable from the surrounding scope.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The closure uses the captured value.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Closure capture."
+        ]
+      },
+      {
+        "id": "ch13-ex03",
+        "chapterNumber": 13,
+        "title": "Fn traits",
+        "conceptFocus": "Fn traits",
+        "prompt": "Pass a closure into a function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 3: Fn traits\");\n    chapter_13_exercise_3();\n}\n\nfn chapter_13_exercise_3() {\n    // TODO: Pass a closure into a function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The function calls the closure.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Fn traits."
+        ]
+      },
+      {
+        "id": "ch13-ex04",
+        "chapterNumber": 13,
+        "title": "Iterator next",
+        "conceptFocus": "Iterator next",
+        "prompt": "Call `next` manually on an iterator.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 4: Iterator next\");\n    chapter_13_exercise_4();\n}\n\nfn chapter_13_exercise_4() {\n    // TODO: Call `next` manually on an iterator.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The sequence advances correctly.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Iterator next."
+        ]
+      },
+      {
+        "id": "ch13-ex05",
+        "chapterNumber": 13,
+        "title": "Map and collect",
+        "conceptFocus": "Map and collect",
+        "prompt": "Use `map` and `collect` to transform a vector.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 5: Map and collect\");\n    chapter_13_exercise_5();\n}\n\nfn chapter_13_exercise_5() {\n    // TODO: Use `map` and `collect` to transform a vector.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The new vector has transformed values.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Map and collect."
+        ]
+      },
+      {
+        "id": "ch13-ex06",
+        "chapterNumber": 13,
+        "title": "Lazy adapters",
+        "conceptFocus": "Lazy adapters",
+        "prompt": "Show that `map` is lazy until consumed.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 6: Lazy adapters\");\n    chapter_13_exercise_6();\n}\n\nfn chapter_13_exercise_6() {\n    // TODO: Show that `map` is lazy until consumed.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Work happens only after consumption.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Lazy adapters."
+        ]
+      },
+      {
+        "id": "ch13-ex07",
+        "chapterNumber": 13,
+        "title": "Consuming adapters",
+        "conceptFocus": "Consuming adapters",
+        "prompt": "Use `sum` to consume an iterator.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 7: Consuming adapters\");\n    chapter_13_exercise_7();\n}\n\nfn chapter_13_exercise_7() {\n    // TODO: Use `sum` to consume an iterator.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The total is correct.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Consuming adapters."
+        ]
+      },
+      {
+        "id": "ch13-ex08",
+        "chapterNumber": 13,
+        "title": "Filter",
+        "conceptFocus": "Filter",
+        "prompt": "Filter values that match a predicate.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 8: Filter\");\n    chapter_13_exercise_8();\n}\n\nfn chapter_13_exercise_8() {\n    // TODO: Filter values that match a predicate.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only matching values remain.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Filter."
+        ]
+      },
+      {
+        "id": "ch13-ex09",
+        "chapterNumber": 13,
+        "title": "Refactor loop",
+        "conceptFocus": "Refactor loop",
+        "prompt": "Replace a search loop with iterator adapters.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 9: Refactor loop\");\n    chapter_13_exercise_9();\n}\n\nfn chapter_13_exercise_9() {\n    // TODO: Replace a search loop with iterator adapters.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The result stays the same.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Refactor loop."
+        ]
+      },
+      {
+        "id": "ch13-ex10",
+        "chapterNumber": 13,
+        "title": "Pipeline",
+        "conceptFocus": "Pipeline",
+        "prompt": "Chain `filter`, `map`, and `collect`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 13, exercise 10: Pipeline\");\n    chapter_13_exercise_10();\n}\n\nfn chapter_13_exercise_10() {\n    // TODO: Chain `filter`, `map`, and `collect`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The pipeline output is correct.",
+        "hints": [
+          "Review Chapter 13.",
+          "Focus on Pipeline."
+        ]
+      }
+    ],
+    "14": [
+      {
+        "id": "ch14-ex01",
+        "chapterNumber": 14,
+        "title": "Release profile",
+        "conceptFocus": "Release profile",
+        "prompt": "Add a `[profile.release]` setting.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 1: Release profile\");\n    chapter_14_exercise_1();\n}\n\nfn chapter_14_exercise_1() {\n    // TODO: Add a `[profile.release]` setting.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Cargo accepts the profile.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Release profile."
+        ]
+      },
+      {
+        "id": "ch14-ex02",
+        "chapterNumber": 14,
+        "title": "Doc comments",
+        "conceptFocus": "Doc comments",
+        "prompt": "Document a public `add_one` function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 2: Doc comments\");\n    chapter_14_exercise_2();\n}\n\nfn chapter_14_exercise_2() {\n    // TODO: Document a public `add_one` function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`cargo doc` includes the comment.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Doc comments."
+        ]
+      },
+      {
+        "id": "ch14-ex03",
+        "chapterNumber": 14,
+        "title": "Crate docs",
+        "conceptFocus": "Crate docs",
+        "prompt": "Add crate-level docs for a tiny library.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 3: Crate docs\");\n    chapter_14_exercise_3();\n}\n\nfn chapter_14_exercise_3() {\n    // TODO: Add crate-level docs for a tiny library.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The library has top-level docs.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Crate docs."
+        ]
+      },
+      {
+        "id": "ch14-ex04",
+        "chapterNumber": 14,
+        "title": "Package metadata",
+        "conceptFocus": "Package metadata",
+        "prompt": "Fill in package metadata in `Cargo.toml`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 4: Package metadata\");\n    chapter_14_exercise_4();\n}\n\nfn chapter_14_exercise_4() {\n    // TODO: Fill in package metadata in `Cargo.toml`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The manifest has useful metadata.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Package metadata."
+        ]
+      },
+      {
+        "id": "ch14-ex05",
+        "chapterNumber": 14,
+        "title": "Workspace",
+        "conceptFocus": "Workspace",
+        "prompt": "Create a workspace with two members.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 5: Workspace\");\n    chapter_14_exercise_5();\n}\n\nfn chapter_14_exercise_5() {\n    // TODO: Create a workspace with two members.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both members build together.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Workspace."
+        ]
+      },
+      {
+        "id": "ch14-ex06",
+        "chapterNumber": 14,
+        "title": "Path dependency",
+        "conceptFocus": "Path dependency",
+        "prompt": "Make one workspace crate use another.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 6: Path dependency\");\n    chapter_14_exercise_6();\n}\n\nfn chapter_14_exercise_6() {\n    // TODO: Make one workspace crate use another.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The dependent crate compiles.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Path dependency."
+        ]
+      },
+      {
+        "id": "ch14-ex07",
+        "chapterNumber": 14,
+        "title": "Feature flag",
+        "conceptFocus": "Feature flag",
+        "prompt": "Add a feature that changes printed output.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 7: Feature flag\");\n    chapter_14_exercise_7();\n}\n\nfn chapter_14_exercise_7() {\n    // TODO: Add a feature that changes printed output.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The feature toggles behavior.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Feature flag."
+        ]
+      },
+      {
+        "id": "ch14-ex08",
+        "chapterNumber": 14,
+        "title": "cargo install",
+        "conceptFocus": "cargo install",
+        "prompt": "Install a tiny binary with `cargo install --path .`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 8: cargo install\");\n    chapter_14_exercise_8();\n}\n\nfn chapter_14_exercise_8() {\n    // TODO: Install a tiny binary with `cargo install --path .`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The installed command runs.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on cargo install."
+        ]
+      },
+      {
+        "id": "ch14-ex09",
+        "chapterNumber": 14,
+        "title": "Custom command",
+        "conceptFocus": "Custom command",
+        "prompt": "Create a `cargo-hello` command.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 9: Custom command\");\n    chapter_14_exercise_9();\n}\n\nfn chapter_14_exercise_9() {\n    // TODO: Create a `cargo-hello` command.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`cargo hello` prints a message.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on Custom command."
+        ]
+      },
+      {
+        "id": "ch14-ex10",
+        "chapterNumber": 14,
+        "title": "SemVer",
+        "conceptFocus": "SemVer",
+        "prompt": "Choose a compatible dependency version.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 14, exercise 10: SemVer\");\n    chapter_14_exercise_10();\n}\n\nfn chapter_14_exercise_10() {\n    // TODO: Choose a compatible dependency version.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The version requirement is valid.",
+        "hints": [
+          "Review Chapter 14.",
+          "Focus on SemVer."
+        ]
+      }
+    ],
+    "15": [
+      {
+        "id": "ch15-ex01",
+        "chapterNumber": 15,
+        "title": "Box<T>",
+        "conceptFocus": "Box<T>",
+        "prompt": "Store a value on the heap with `Box<T>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 1: Box<T>\");\n    chapter_15_exercise_1();\n}\n\nfn chapter_15_exercise_1() {\n    // TODO: Store a value on the heap with `Box<T>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Dereferencing prints the value.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Box<T>."
+        ]
+      },
+      {
+        "id": "ch15-ex02",
+        "chapterNumber": 15,
+        "title": "Recursive type",
+        "conceptFocus": "Recursive type",
+        "prompt": "Build a tiny recursive list with `Box<T>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 2: Recursive type\");\n    chapter_15_exercise_2();\n}\n\nfn chapter_15_exercise_2() {\n    // TODO: Build a tiny recursive list with `Box<T>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The list type has a finite size.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Recursive type."
+        ]
+      },
+      {
+        "id": "ch15-ex03",
+        "chapterNumber": 15,
+        "title": "Deref",
+        "conceptFocus": "Deref",
+        "prompt": "Implement `Deref` for a custom smart pointer.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 3: Deref\");\n    chapter_15_exercise_3();\n}\n\nfn chapter_15_exercise_3() {\n    // TODO: Implement `Deref` for a custom smart pointer.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Dereference syntax works.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Deref."
+        ]
+      },
+      {
+        "id": "ch15-ex04",
+        "chapterNumber": 15,
+        "title": "Drop",
+        "conceptFocus": "Drop",
+        "prompt": "Print a message when a value is dropped.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 4: Drop\");\n    chapter_15_exercise_4();\n}\n\nfn chapter_15_exercise_4() {\n    // TODO: Print a message when a value is dropped.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Drop runs at scope end.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Drop."
+        ]
+      },
+      {
+        "id": "ch15-ex05",
+        "chapterNumber": 15,
+        "title": "Rc<T>",
+        "conceptFocus": "Rc<T>",
+        "prompt": "Share one value with cloned `Rc<T>` pointers.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 5: Rc<T>\");\n    chapter_15_exercise_5();\n}\n\nfn chapter_15_exercise_5() {\n    // TODO: Share one value with cloned `Rc<T>` pointers.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The strong count changes.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Rc<T>."
+        ]
+      },
+      {
+        "id": "ch15-ex06",
+        "chapterNumber": 15,
+        "title": "RefCell<T>",
+        "conceptFocus": "RefCell<T>",
+        "prompt": "Mutate data through `RefCell<T>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 6: RefCell<T>\");\n    chapter_15_exercise_6();\n}\n\nfn chapter_15_exercise_6() {\n    // TODO: Mutate data through `RefCell<T>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Runtime borrowing succeeds.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on RefCell<T>."
+        ]
+      },
+      {
+        "id": "ch15-ex07",
+        "chapterNumber": 15,
+        "title": "Interior mutability",
+        "conceptFocus": "Interior mutability",
+        "prompt": "Record messages through an immutable interface.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 7: Interior mutability\");\n    chapter_15_exercise_7();\n}\n\nfn chapter_15_exercise_7() {\n    // TODO: Record messages through an immutable interface.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The messages are stored.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Interior mutability."
+        ]
+      },
+      {
+        "id": "ch15-ex08",
+        "chapterNumber": 15,
+        "title": "Borrow panic",
+        "conceptFocus": "Borrow panic",
+        "prompt": "Trigger and then fix a `RefCell` borrow panic.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 8: Borrow panic\");\n    chapter_15_exercise_8();\n}\n\nfn chapter_15_exercise_8() {\n    // TODO: Trigger and then fix a `RefCell` borrow panic.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The fixed code avoids the panic.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Borrow panic."
+        ]
+      },
+      {
+        "id": "ch15-ex09",
+        "chapterNumber": 15,
+        "title": "Weak<T>",
+        "conceptFocus": "Weak<T>",
+        "prompt": "Store a parent link with `Weak<T>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 9: Weak<T>\");\n    chapter_15_exercise_9();\n}\n\nfn chapter_15_exercise_9() {\n    // TODO: Store a parent link with `Weak<T>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The parent link does not create ownership.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Weak<T>."
+        ]
+      },
+      {
+        "id": "ch15-ex10",
+        "chapterNumber": 15,
+        "title": "Cycle cleanup",
+        "conceptFocus": "Cycle cleanup",
+        "prompt": "Break a reference cycle with `Weak<T>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 15, exercise 10: Cycle cleanup\");\n    chapter_15_exercise_10();\n}\n\nfn chapter_15_exercise_10() {\n    // TODO: Break a reference cycle with `Weak<T>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Strong counts can reach zero.",
+        "hints": [
+          "Review Chapter 15.",
+          "Focus on Cycle cleanup."
+        ]
+      }
+    ],
+    "16": [
+      {
+        "id": "ch16-ex01",
+        "chapterNumber": 16,
+        "title": "Spawn thread",
+        "conceptFocus": "Spawn thread",
+        "prompt": "Spawn a thread that prints five messages.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 1: Spawn thread\");\n    chapter_16_exercise_1();\n}\n\nfn chapter_16_exercise_1() {\n    // TODO: Spawn a thread that prints five messages.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both threads run.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Spawn thread."
+        ]
+      },
+      {
+        "id": "ch16-ex02",
+        "chapterNumber": 16,
+        "title": "Join handle",
+        "conceptFocus": "Join handle",
+        "prompt": "Join a thread before `main` exits.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 2: Join handle\");\n    chapter_16_exercise_2();\n}\n\nfn chapter_16_exercise_2() {\n    // TODO: Join a thread before `main` exits.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "All thread output appears.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Join handle."
+        ]
+      },
+      {
+        "id": "ch16-ex03",
+        "chapterNumber": 16,
+        "title": "move closure",
+        "conceptFocus": "move closure",
+        "prompt": "Move a vector into a spawned thread.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 3: move closure\");\n    chapter_16_exercise_3();\n}\n\nfn chapter_16_exercise_3() {\n    // TODO: Move a vector into a spawned thread.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The thread owns the vector.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on move closure."
+        ]
+      },
+      {
+        "id": "ch16-ex04",
+        "chapterNumber": 16,
+        "title": "Channel send",
+        "conceptFocus": "Channel send",
+        "prompt": "Send one message over a channel.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 4: Channel send\");\n    chapter_16_exercise_4();\n}\n\nfn chapter_16_exercise_4() {\n    // TODO: Send one message over a channel.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The receiver prints the message.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Channel send."
+        ]
+      },
+      {
+        "id": "ch16-ex05",
+        "chapterNumber": 16,
+        "title": "Multiple producers",
+        "conceptFocus": "Multiple producers",
+        "prompt": "Send messages from two producers.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 5: Multiple producers\");\n    chapter_16_exercise_5();\n}\n\nfn chapter_16_exercise_5() {\n    // TODO: Send messages from two producers.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "All messages are received.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Multiple producers."
+        ]
+      },
+      {
+        "id": "ch16-ex06",
+        "chapterNumber": 16,
+        "title": "Mutex<T>",
+        "conceptFocus": "Mutex<T>",
+        "prompt": "Protect a counter with `Mutex<T>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 6: Mutex<T>\");\n    chapter_16_exercise_6();\n}\n\nfn chapter_16_exercise_6() {\n    // TODO: Protect a counter with `Mutex<T>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The counter updates safely.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Mutex<T>."
+        ]
+      },
+      {
+        "id": "ch16-ex07",
+        "chapterNumber": 16,
+        "title": "Arc<T>",
+        "conceptFocus": "Arc<T>",
+        "prompt": "Share a counter across threads with `Arc`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 7: Arc<T>\");\n    chapter_16_exercise_7();\n}\n\nfn chapter_16_exercise_7() {\n    // TODO: Share a counter across threads with `Arc`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "All threads update one counter.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Arc<T>."
+        ]
+      },
+      {
+        "id": "ch16-ex08",
+        "chapterNumber": 16,
+        "title": "Lock scope",
+        "conceptFocus": "Lock scope",
+        "prompt": "Release a mutex lock before doing extra work.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 8: Lock scope\");\n    chapter_16_exercise_8();\n}\n\nfn chapter_16_exercise_8() {\n    // TODO: Release a mutex lock before doing extra work.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "No thread waits unnecessarily.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Lock scope."
+        ]
+      },
+      {
+        "id": "ch16-ex09",
+        "chapterNumber": 16,
+        "title": "Send and Sync",
+        "conceptFocus": "Send and Sync",
+        "prompt": "Fix thread code that uses the wrong shared type.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 9: Send and Sync\");\n    chapter_16_exercise_9();\n}\n\nfn chapter_16_exercise_9() {\n    // TODO: Fix thread code that uses the wrong shared type.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The fixed type is thread safe.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Send and Sync."
+        ]
+      },
+      {
+        "id": "ch16-ex10",
+        "chapterNumber": 16,
+        "title": "Coordination",
+        "conceptFocus": "Coordination",
+        "prompt": "Send a shutdown message to worker threads.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 16, exercise 10: Coordination\");\n    chapter_16_exercise_10();\n}\n\nfn chapter_16_exercise_10() {\n    // TODO: Send a shutdown message to worker threads.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Workers stop cleanly.",
+        "hints": [
+          "Review Chapter 16.",
+          "Focus on Coordination."
+        ]
+      }
+    ],
+    "17": [
+      {
+        "id": "ch17-ex01",
+        "chapterNumber": 17,
+        "title": "async fn",
+        "conceptFocus": "async fn",
+        "prompt": "Write an async function and await it.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 1: async fn\");\n    chapter_17_exercise_1();\n}\n\nfn chapter_17_exercise_1() {\n    // TODO: Write an async function and await it.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The awaited value prints.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on async fn."
+        ]
+      },
+      {
+        "id": "ch17-ex02",
+        "chapterNumber": 17,
+        "title": "Future value",
+        "conceptFocus": "Future value",
+        "prompt": "Store an async block in a variable.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 2: Future value\");\n    chapter_17_exercise_2();\n}\n\nfn chapter_17_exercise_2() {\n    // TODO: Store an async block in a variable.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The future runs when awaited.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on Future value."
+        ]
+      },
+      {
+        "id": "ch17-ex03",
+        "chapterNumber": 17,
+        "title": "await points",
+        "conceptFocus": "await points",
+        "prompt": "Print before and after an `.await`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 3: await points\");\n    chapter_17_exercise_3();\n}\n\nfn chapter_17_exercise_3() {\n    // TODO: Print before and after an `.await`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The output shows the wait point.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on await points."
+        ]
+      },
+      {
+        "id": "ch17-ex04",
+        "chapterNumber": 17,
+        "title": "join",
+        "conceptFocus": "join",
+        "prompt": "Await two futures with `join`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 4: join\");\n    chapter_17_exercise_4();\n}\n\nfn chapter_17_exercise_4() {\n    // TODO: Await two futures with `join`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both futures complete.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on join."
+        ]
+      },
+      {
+        "id": "ch17-ex05",
+        "chapterNumber": 17,
+        "title": "race",
+        "conceptFocus": "race",
+        "prompt": "Race two futures and print the first result.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 5: race\");\n    chapter_17_exercise_5();\n}\n\nfn chapter_17_exercise_5() {\n    // TODO: Race two futures and print the first result.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only the first result wins.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on race."
+        ]
+      },
+      {
+        "id": "ch17-ex06",
+        "chapterNumber": 17,
+        "title": "Task spawn",
+        "conceptFocus": "Task spawn",
+        "prompt": "Spawn a task that sends a message.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 6: Task spawn\");\n    chapter_17_exercise_6();\n}\n\nfn chapter_17_exercise_6() {\n    // TODO: Spawn a task that sends a message.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The message is received.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on Task spawn."
+        ]
+      },
+      {
+        "id": "ch17-ex07",
+        "chapterNumber": 17,
+        "title": "Streams",
+        "conceptFocus": "Streams",
+        "prompt": "Consume a stream with `next().await`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 7: Streams\");\n    chapter_17_exercise_7();\n}\n\nfn chapter_17_exercise_7() {\n    // TODO: Consume a stream with `next().await`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each stream item prints.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on Streams."
+        ]
+      },
+      {
+        "id": "ch17-ex08",
+        "chapterNumber": 17,
+        "title": "Pinning",
+        "conceptFocus": "Pinning",
+        "prompt": "Pin futures before storing them in a vector.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 8: Pinning\");\n    chapter_17_exercise_8();\n}\n\nfn chapter_17_exercise_8() {\n    // TODO: Pin futures before storing them in a vector.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The vector of futures compiles.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on Pinning."
+        ]
+      },
+      {
+        "id": "ch17-ex09",
+        "chapterNumber": 17,
+        "title": "Tasks vs threads",
+        "conceptFocus": "Tasks vs threads",
+        "prompt": "Write one thread sleep and one async sleep example.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 9: Tasks vs threads\");\n    chapter_17_exercise_9();\n}\n\nfn chapter_17_exercise_9() {\n    // TODO: Write one thread sleep and one async sleep example.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The examples show the difference.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on Tasks vs threads."
+        ]
+      },
+      {
+        "id": "ch17-ex10",
+        "chapterNumber": 17,
+        "title": "Structured concurrency",
+        "conceptFocus": "Structured concurrency",
+        "prompt": "Wait for all spawned async work before exiting.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 17, exercise 10: Structured concurrency\");\n    chapter_17_exercise_10();\n}\n\nfn chapter_17_exercise_10() {\n    // TODO: Wait for all spawned async work before exiting.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "No task is left unfinished.",
+        "hints": [
+          "Review Chapter 17.",
+          "Focus on Structured concurrency."
+        ]
+      }
+    ],
+    "18": [
+      {
+        "id": "ch18-ex01",
+        "chapterNumber": 18,
+        "title": "Encapsulation",
+        "conceptFocus": "Encapsulation",
+        "prompt": "Hide fields and expose methods on a struct.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 1: Encapsulation\");\n    chapter_18_exercise_1();\n}\n\nfn chapter_18_exercise_1() {\n    // TODO: Hide fields and expose methods on a struct.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Invalid state cannot be set directly.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Encapsulation."
+        ]
+      },
+      {
+        "id": "ch18-ex02",
+        "chapterNumber": 18,
+        "title": "Trait objects",
+        "conceptFocus": "Trait objects",
+        "prompt": "Store two drawable values in `Vec<Box<dyn Draw>>`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 2: Trait objects\");\n    chapter_18_exercise_2();\n}\n\nfn chapter_18_exercise_2() {\n    // TODO: Store two drawable values in `Vec<Box<dyn Draw>>`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each item can be drawn.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Trait objects."
+        ]
+      },
+      {
+        "id": "ch18-ex03",
+        "chapterNumber": 18,
+        "title": "Dynamic dispatch",
+        "conceptFocus": "Dynamic dispatch",
+        "prompt": "Call the same method on different trait objects.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 3: Dynamic dispatch\");\n    chapter_18_exercise_3();\n}\n\nfn chapter_18_exercise_3() {\n    // TODO: Call the same method on different trait objects.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each concrete type behaves differently.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Dynamic dispatch."
+        ]
+      },
+      {
+        "id": "ch18-ex04",
+        "chapterNumber": 18,
+        "title": "Screen example",
+        "conceptFocus": "Screen example",
+        "prompt": "Build a small screen that runs components.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 4: Screen example\");\n    chapter_18_exercise_4();\n}\n\nfn chapter_18_exercise_4() {\n    // TODO: Build a small screen that runs components.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Every component is rendered.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Screen example."
+        ]
+      },
+      {
+        "id": "ch18-ex05",
+        "chapterNumber": 18,
+        "title": "State pattern",
+        "conceptFocus": "State pattern",
+        "prompt": "Model draft, review, and published states.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 5: State pattern\");\n    chapter_18_exercise_5();\n}\n\nfn chapter_18_exercise_5() {\n    // TODO: Model draft, review, and published states.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only published content is visible.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on State pattern."
+        ]
+      },
+      {
+        "id": "ch18-ex06",
+        "chapterNumber": 18,
+        "title": "Type-state",
+        "conceptFocus": "Type-state",
+        "prompt": "Use types to prevent publishing before review.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 6: Type-state\");\n    chapter_18_exercise_6();\n}\n\nfn chapter_18_exercise_6() {\n    // TODO: Use types to prevent publishing before review.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Invalid transitions do not compile.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Type-state."
+        ]
+      },
+      {
+        "id": "ch18-ex07",
+        "chapterNumber": 18,
+        "title": "Object safety",
+        "conceptFocus": "Object safety",
+        "prompt": "Fix a trait so it can be used as a trait object.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 7: Object safety\");\n    chapter_18_exercise_7();\n}\n\nfn chapter_18_exercise_7() {\n    // TODO: Fix a trait so it can be used as a trait object.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "`dyn Trait` becomes valid.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Object safety."
+        ]
+      },
+      {
+        "id": "ch18-ex08",
+        "chapterNumber": 18,
+        "title": "Composition",
+        "conceptFocus": "Composition",
+        "prompt": "Compose behavior with fields instead of inheritance.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 8: Composition\");\n    chapter_18_exercise_8();\n}\n\nfn chapter_18_exercise_8() {\n    // TODO: Compose behavior with fields instead of inheritance.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The composed type delegates work.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Composition."
+        ]
+      },
+      {
+        "id": "ch18-ex09",
+        "chapterNumber": 18,
+        "title": "Enum alternative",
+        "conceptFocus": "Enum alternative",
+        "prompt": "Replace trait objects with an enum.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 9: Enum alternative\");\n    chapter_18_exercise_9();\n}\n\nfn chapter_18_exercise_9() {\n    // TODO: Replace trait objects with an enum.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The enum handles each variant.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on Enum alternative."
+        ]
+      },
+      {
+        "id": "ch18-ex10",
+        "chapterNumber": 18,
+        "title": "API boundary",
+        "conceptFocus": "API boundary",
+        "prompt": "Expose a small public API for a stateful type.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 18, exercise 10: API boundary\");\n    chapter_18_exercise_10();\n}\n\nfn chapter_18_exercise_10() {\n    // TODO: Expose a small public API for a stateful type.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Callers cannot skip required steps.",
+        "hints": [
+          "Review Chapter 18.",
+          "Focus on API boundary."
+        ]
+      }
+    ],
+    "19": [
+      {
+        "id": "ch19-ex01",
+        "chapterNumber": 19,
+        "title": "match arms",
+        "conceptFocus": "match arms",
+        "prompt": "Match three numeric cases and a fallback.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 1: match arms\");\n    chapter_19_exercise_1();\n}\n\nfn chapter_19_exercise_1() {\n    // TODO: Match three numeric cases and a fallback.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Every input has an output.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on match arms."
+        ]
+      },
+      {
+        "id": "ch19-ex02",
+        "chapterNumber": 19,
+        "title": "if let",
+        "conceptFocus": "if let",
+        "prompt": "Use `if let` to handle one enum variant.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 2: if let\");\n    chapter_19_exercise_2();\n}\n\nfn chapter_19_exercise_2() {\n    // TODO: Use `if let` to handle one enum variant.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Other variants are ignored.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on if let."
+        ]
+      },
+      {
+        "id": "ch19-ex03",
+        "chapterNumber": 19,
+        "title": "while let",
+        "conceptFocus": "while let",
+        "prompt": "Pop values from a stack with `while let`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 3: while let\");\n    chapter_19_exercise_3();\n}\n\nfn chapter_19_exercise_3() {\n    // TODO: Pop values from a stack with `while let`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The loop stops when empty.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on while let."
+        ]
+      },
+      {
+        "id": "ch19-ex04",
+        "chapterNumber": 19,
+        "title": "Struct destructuring",
+        "conceptFocus": "Struct destructuring",
+        "prompt": "Destructure a point into `x` and `y`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 4: Struct destructuring\");\n    chapter_19_exercise_4();\n}\n\nfn chapter_19_exercise_4() {\n    // TODO: Destructure a point into `x` and `y`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Both fields are used.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on Struct destructuring."
+        ]
+      },
+      {
+        "id": "ch19-ex05",
+        "chapterNumber": 19,
+        "title": "Enum destructuring",
+        "conceptFocus": "Enum destructuring",
+        "prompt": "Destructure enum data in a match arm.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 5: Enum destructuring\");\n    chapter_19_exercise_5();\n}\n\nfn chapter_19_exercise_5() {\n    // TODO: Destructure enum data in a match arm.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The inner data is printed.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on Enum destructuring."
+        ]
+      },
+      {
+        "id": "ch19-ex06",
+        "chapterNumber": 19,
+        "title": "Nested destructuring",
+        "conceptFocus": "Nested destructuring",
+        "prompt": "Match nested structs and enums.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 6: Nested destructuring\");\n    chapter_19_exercise_6();\n}\n\nfn chapter_19_exercise_6() {\n    // TODO: Match nested structs and enums.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The nested value is extracted.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on Nested destructuring."
+        ]
+      },
+      {
+        "id": "ch19-ex07",
+        "chapterNumber": 19,
+        "title": "Match guards",
+        "conceptFocus": "Match guards",
+        "prompt": "Add a guard to one match arm.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 7: Match guards\");\n    chapter_19_exercise_7();\n}\n\nfn chapter_19_exercise_7() {\n    // TODO: Add a guard to one match arm.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The guard changes the matched case.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on Match guards."
+        ]
+      },
+      {
+        "id": "ch19-ex08",
+        "chapterNumber": 19,
+        "title": "@ bindings",
+        "conceptFocus": "@ bindings",
+        "prompt": "Bind and test a value with `@`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 8: @ bindings\");\n    chapter_19_exercise_8();\n}\n\nfn chapter_19_exercise_8() {\n    // TODO: Bind and test a value with `@`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The bound value is printed.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on @ bindings."
+        ]
+      },
+      {
+        "id": "ch19-ex09",
+        "chapterNumber": 19,
+        "title": "Ranges",
+        "conceptFocus": "Ranges",
+        "prompt": "Match a number or char range.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 9: Ranges\");\n    chapter_19_exercise_9();\n}\n\nfn chapter_19_exercise_9() {\n    // TODO: Match a number or char range.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Values in range use the right arm.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on Ranges."
+        ]
+      },
+      {
+        "id": "ch19-ex10",
+        "chapterNumber": 19,
+        "title": "Ignored values",
+        "conceptFocus": "Ignored values",
+        "prompt": "Ignore unused fields with `..` or `_`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 19, exercise 10: Ignored values\");\n    chapter_19_exercise_10();\n}\n\nfn chapter_19_exercise_10() {\n    // TODO: Ignore unused fields with `..` or `_`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Only needed values are bound.",
+        "hints": [
+          "Review Chapter 19.",
+          "Focus on Ignored values."
+        ]
+      }
+    ],
+    "20": [
+      {
+        "id": "ch20-ex01",
+        "chapterNumber": 20,
+        "title": "unsafe block",
+        "conceptFocus": "unsafe block",
+        "prompt": "Dereference a raw pointer in an unsafe block.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 1: unsafe block\");\n    chapter_20_exercise_1();\n}\n\nfn chapter_20_exercise_1() {\n    // TODO: Dereference a raw pointer in an unsafe block.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The unsafe block is minimal.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on unsafe block."
+        ]
+      },
+      {
+        "id": "ch20-ex02",
+        "chapterNumber": 20,
+        "title": "Unsafe function",
+        "conceptFocus": "Unsafe function",
+        "prompt": "Call an unsafe function inside `unsafe`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 2: Unsafe function\");\n    chapter_20_exercise_2();\n}\n\nfn chapter_20_exercise_2() {\n    // TODO: Call an unsafe function inside `unsafe`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The safety boundary is visible.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Unsafe function."
+        ]
+      },
+      {
+        "id": "ch20-ex03",
+        "chapterNumber": 20,
+        "title": "split_at_mut",
+        "conceptFocus": "split_at_mut",
+        "prompt": "Recreate the idea behind `split_at_mut`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 3: split_at_mut\");\n    chapter_20_exercise_3();\n}\n\nfn chapter_20_exercise_3() {\n    // TODO: Recreate the idea behind `split_at_mut`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The two slices do not overlap.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on split_at_mut."
+        ]
+      },
+      {
+        "id": "ch20-ex04",
+        "chapterNumber": 20,
+        "title": "Associated types",
+        "conceptFocus": "Associated types",
+        "prompt": "Define a trait with an associated type.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 4: Associated types\");\n    chapter_20_exercise_4();\n}\n\nfn chapter_20_exercise_4() {\n    // TODO: Define a trait with an associated type.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The implementor chooses the item type.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Associated types."
+        ]
+      },
+      {
+        "id": "ch20-ex05",
+        "chapterNumber": 20,
+        "title": "Default generic type",
+        "conceptFocus": "Default generic type",
+        "prompt": "Use a default generic type parameter.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 5: Default generic type\");\n    chapter_20_exercise_5();\n}\n\nfn chapter_20_exercise_5() {\n    // TODO: Use a default generic type parameter.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The default works without annotation.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Default generic type."
+        ]
+      },
+      {
+        "id": "ch20-ex06",
+        "chapterNumber": 20,
+        "title": "Newtype pattern",
+        "conceptFocus": "Newtype pattern",
+        "prompt": "Wrap a vector in a newtype and implement `Display`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 6: Newtype pattern\");\n    chapter_20_exercise_6();\n}\n\nfn chapter_20_exercise_6() {\n    // TODO: Wrap a vector in a newtype and implement `Display`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The wrapper prints cleanly.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Newtype pattern."
+        ]
+      },
+      {
+        "id": "ch20-ex07",
+        "chapterNumber": 20,
+        "title": "Type alias",
+        "conceptFocus": "Type alias",
+        "prompt": "Replace a long `Result` type with an alias.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 7: Type alias\");\n    chapter_20_exercise_7();\n}\n\nfn chapter_20_exercise_7() {\n    // TODO: Replace a long `Result` type with an alias.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The function signature is shorter.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Type alias."
+        ]
+      },
+      {
+        "id": "ch20-ex08",
+        "chapterNumber": 20,
+        "title": "Function pointer",
+        "conceptFocus": "Function pointer",
+        "prompt": "Pass a function pointer into a helper.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 8: Function pointer\");\n    chapter_20_exercise_8();\n}\n\nfn chapter_20_exercise_8() {\n    // TODO: Pass a function pointer into a helper.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The helper calls the function.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Function pointer."
+        ]
+      },
+      {
+        "id": "ch20-ex09",
+        "chapterNumber": 20,
+        "title": "Returned closure",
+        "conceptFocus": "Returned closure",
+        "prompt": "Return a boxed closure from a function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 9: Returned closure\");\n    chapter_20_exercise_9();\n}\n\nfn chapter_20_exercise_9() {\n    // TODO: Return a boxed closure from a function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The returned closure can be called.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on Returned closure."
+        ]
+      },
+      {
+        "id": "ch20-ex10",
+        "chapterNumber": 20,
+        "title": "macro_rules!",
+        "conceptFocus": "macro_rules!",
+        "prompt": "Write a small macro that builds a vector.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 20, exercise 10: macro_rules!\");\n    chapter_20_exercise_10();\n}\n\nfn chapter_20_exercise_10() {\n    // TODO: Write a small macro that builds a vector.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The macro expands to valid code.",
+        "hints": [
+          "Review Chapter 20.",
+          "Focus on macro_rules!."
+        ]
+      }
+    ],
+    "21": [
+      {
+        "id": "ch21-ex01",
+        "chapterNumber": 21,
+        "title": "TCP listener",
+        "conceptFocus": "TCP listener",
+        "prompt": "Bind a `TcpListener` to localhost.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 1: TCP listener\");\n    chapter_21_exercise_1();\n}\n\nfn chapter_21_exercise_1() {\n    // TODO: Bind a `TcpListener` to localhost.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The listener accepts connections.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on TCP listener."
+        ]
+      },
+      {
+        "id": "ch21-ex02",
+        "chapterNumber": 21,
+        "title": "HTTP request",
+        "conceptFocus": "HTTP request",
+        "prompt": "Read and print the first request line.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 2: HTTP request\");\n    chapter_21_exercise_2();\n}\n\nfn chapter_21_exercise_2() {\n    // TODO: Read and print the first request line.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The request line is visible.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on HTTP request."
+        ]
+      },
+      {
+        "id": "ch21-ex03",
+        "chapterNumber": 21,
+        "title": "Response",
+        "conceptFocus": "Response",
+        "prompt": "Write a tiny HTTP response to the stream.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 3: Response\");\n    chapter_21_exercise_3();\n}\n\nfn chapter_21_exercise_3() {\n    // TODO: Write a tiny HTTP response to the stream.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "The browser receives a response.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Response."
+        ]
+      },
+      {
+        "id": "ch21-ex04",
+        "chapterNumber": 21,
+        "title": "Routing",
+        "conceptFocus": "Routing",
+        "prompt": "Return different bodies for `/` and `/sleep`.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 4: Routing\");\n    chapter_21_exercise_4();\n}\n\nfn chapter_21_exercise_4() {\n    // TODO: Return different bodies for `/` and `/sleep`.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Each route has the right body.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Routing."
+        ]
+      },
+      {
+        "id": "ch21-ex05",
+        "chapterNumber": 21,
+        "title": "Thread pool",
+        "conceptFocus": "Thread pool",
+        "prompt": "Create a `ThreadPool::new` constructor.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 5: Thread pool\");\n    chapter_21_exercise_5();\n}\n\nfn chapter_21_exercise_5() {\n    // TODO: Create a `ThreadPool::new` constructor.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Invalid sizes are rejected.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Thread pool."
+        ]
+      },
+      {
+        "id": "ch21-ex06",
+        "chapterNumber": 21,
+        "title": "Worker",
+        "conceptFocus": "Worker",
+        "prompt": "Spawn workers that wait for jobs.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 6: Worker\");\n    chapter_21_exercise_6();\n}\n\nfn chapter_21_exercise_6() {\n    // TODO: Spawn workers that wait for jobs.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Workers receive jobs from the pool.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Worker."
+        ]
+      },
+      {
+        "id": "ch21-ex07",
+        "chapterNumber": 21,
+        "title": "Message passing",
+        "conceptFocus": "Message passing",
+        "prompt": "Send boxed jobs through a channel.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 7: Message passing\");\n    chapter_21_exercise_7();\n}\n\nfn chapter_21_exercise_7() {\n    // TODO: Send boxed jobs through a channel.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "A worker executes each job.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Message passing."
+        ]
+      },
+      {
+        "id": "ch21-ex08",
+        "chapterNumber": 21,
+        "title": "Graceful shutdown",
+        "conceptFocus": "Graceful shutdown",
+        "prompt": "Tell workers to stop before dropping the pool.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 8: Graceful shutdown\");\n    chapter_21_exercise_8();\n}\n\nfn chapter_21_exercise_8() {\n    // TODO: Tell workers to stop before dropping the pool.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Workers exit cleanly.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Graceful shutdown."
+        ]
+      },
+      {
+        "id": "ch21-ex09",
+        "chapterNumber": 21,
+        "title": "Error handling",
+        "conceptFocus": "Error handling",
+        "prompt": "Handle connection errors without stopping the server.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 9: Error handling\");\n    chapter_21_exercise_9();\n}\n\nfn chapter_21_exercise_9() {\n    // TODO: Handle connection errors without stopping the server.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Bad connections are logged.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Error handling."
+        ]
+      },
+      {
+        "id": "ch21-ex10",
+        "chapterNumber": 21,
+        "title": "Refactoring",
+        "conceptFocus": "Refactoring",
+        "prompt": "Extract request handling into a small function.",
+        "workspaceSetup": "Open the starter project, then edit the Rust files needed for this exercise.",
+        "starterCode": "fn main() {\n    println!(\"Chapter 21, exercise 10: Refactoring\");\n    chapter_21_exercise_10();\n}\n\nfn chapter_21_exercise_10() {\n    // TODO: Extract request handling into a small function.\n    println!(\"TODO\");\n}\n",
+        "expectedBehavior": "Server behavior stays the same.",
+        "hints": [
+          "Review Chapter 21.",
+          "Focus on Refactoring."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "rust-book-interactive-course",
+  "displayName": "Rust Book Interactive Course",
+  "description": "Read The Rust Programming Language as an interactive VS Code course with runnable commands, runnable Rust snippets, and chapter exercises.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "packageManager": "pnpm@11.0.6",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Education",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onCommand:rustBookCourse.open",
+    "onCommand:rustBookCourse.openChapter",
+    "onCommand:rustBookCourse.runCommand",
+    "onCommand:rustBookCourse.runRustSnippet"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rustBookCourse.open",
+        "title": "Rust Book Course: Open Reader"
+      },
+      {
+        "command": "rustBookCourse.openChapter",
+        "title": "Rust Book Course: Open Chapter"
+      },
+      {
+        "command": "rustBookCourse.runCommand",
+        "title": "Rust Book Course: Run Terminal Command"
+      },
+      {
+        "command": "rustBookCourse.runRustSnippet",
+        "title": "Rust Book Course: Run Rust Snippet"
+      }
+    ]
+  },
+  "scripts": {
+    "generate:exercises": "node scripts/generate-exercises.mjs",
+    "generate:book": "node scripts/generate-book.mjs",
+    "generate": "pnpm run generate:exercises && pnpm run generate:book",
+    "compile": "node scripts/run-tsc.mjs -p ./tsconfig.json",
+    "test": "pnpm run generate && pnpm run compile && node test/runTests.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.4.5"
+  }
+}
