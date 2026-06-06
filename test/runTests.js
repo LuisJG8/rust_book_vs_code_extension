@@ -39,10 +39,12 @@ function testTocParsing({ parseTocFromHtml }) {
 }
 
 function testMainExtraction({ extractMainContent, rewriteLocalLinks }) {
-  const main = extractMainContent('<html><body><main><h1>Title</h1><p><a href="ch01.html#x">x</a></p></main></body></html>');
+  const main = extractMainContent('<html><body><main><h1>Title</h1><p><a href="ch01.html#x">x</a></p><pre><code><span class="boring">fn main() {\n</span>println!("visible");\n<span class="boring">}</span></code></pre></main></body></html>');
   const rewritten = rewriteLocalLinks(main, new Set(['ch01.html']));
 
   assert.match(main, /<h1>Title<\/h1>/);
+  assert.match(main, /println!\("visible"\);/);
+  assert.doesNotMatch(main, /class="boring"|fn main\(\)|<\/span>/);
   assert.match(rewritten, /data-book-href="ch01\.html"/);
   assert.match(rewritten, /data-book-anchor="#x"/);
 }

@@ -367,6 +367,10 @@ main h4,
   border-radius: 6px;
 }
 
+.reader-content .boring {
+  display: none;
+}
+
 .code-shell {
   margin: 16px 0;
   overflow: hidden;

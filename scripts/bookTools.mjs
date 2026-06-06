@@ -111,6 +111,7 @@ export function extractMainContent(html) {
 
   return match[1]
     .replace(/<!--\s*ignore\s*-->/gi, '')
+    .replace(/<span\s+class="boring">[\s\S]*?<\/span>/gi, '')
     .replace(/\s+id="copy-button-[^"]*"/g, '')
     .trim();
 }
